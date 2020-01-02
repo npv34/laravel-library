@@ -22,6 +22,10 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">{{Session::get('success')}}</div>
+                        @endif
+                        <a class="btn btn-primary" href="{{route('users.create')}}">Create</a>
                         <div class="table-responsive">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
@@ -31,6 +35,7 @@
                                     <th>Phone</th>
                                     <th>Email</th>
                                     <th>Address</th>
+                                    <th>Handles</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -42,6 +47,8 @@
                                     <td>{{$user->phone}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->address}}</td>
+                                    <td><a href="{{route('users.edit',$user->id)}}" class="btn btn-success">Edit</a></td>
+                                    <td><a href="{{route('users.destroy',$user->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                 </tr>
                                     @empty
                                     <tr>
