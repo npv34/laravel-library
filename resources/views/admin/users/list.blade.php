@@ -47,7 +47,7 @@
                                     <td>{{$user->phone}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->address}}</td>
-                                    <td><a href="" class="btn btn-success">Edit</a></td>
+                                    <td><a href="{{route('users.edit',$user->id)}}" class="btn btn-success">Edit</a></td>
                                     <td><a href="{{route('users.destroy',$user->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                 </tr>
                                     @empty
