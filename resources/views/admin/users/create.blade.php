@@ -6,7 +6,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border bg-light">
-                        <h4 class="box-title">Bootstrap Form Validation check the <a class="text-warning" href="http://reactiveraven.github.io/jqBootstrapValidation/">official website </a></h4>
+                        <h4 class="box-title">Create User Form <a class="text-warning" href="http://reactiveraven.github.io/jqBootstrapValidation/"></a></h4>
 
                         <ul class="box-controls pull-right">
                             <li><a class="box-btn-close" href="#"></a></li>
