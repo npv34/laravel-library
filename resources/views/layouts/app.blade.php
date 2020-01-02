@@ -60,244 +60,244 @@
                         <i class="ti-dashboard"></i>
                         <span>Dashboard</span>
                         <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="active"><a href="index.html"><i class="fa fa-circle-thin"></i>Dashboard 1</a></li>
-                        <li><a href="index2.html"><i class="fa fa-circle-thin"></i>Dashboard 2</a></li>
-                        <li><a href="index3.html"><i class="fa fa-circle-thin"></i>Dashboard 3</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-layout-grid2"></i>
-                        <span>App</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/app-chat.html"><i class="fa fa-circle-thin"></i>Chat app</a></li>
-                        <li><a href="pages/app-contact.html"><i class="fa fa-circle-thin"></i>Contact / Employee</a></li>
-                        <li><a href="pages/app-calendar.html"><i class="fa fa-circle-thin"></i>Calendar</a></li>
-                        <li><a href="pages/app-profile.html"><i class="fa fa-circle-thin"></i>Profile</a></li>
-                        <li><a href="pages/app-userlist-grid.html"><i class="fa fa-circle-thin"></i>Userlist Grid</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="pages/mailbox.html">
-                        <i class="ti-email"></i> <span>Mailbox</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-warning">12</small>
-            </span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-layers"></i> <span>Pages</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/page-blank.html"><i class="fa fa-circle-thin"></i>Blank</a></li>
-                        <li><a href="pages/page-coming-soon.html"><i class="fa fa-circle-thin"></i>Coming Soon</a></li>
-                        <li><a href="pages/page-faq.html"><i class="fa fa-circle-thin"></i>FAQ</a></li>
-                        <li><a href="pages/page-gallery.html"><i class="fa fa-circle-thin"></i>Gallery</a></li>
-                        <li><a href="pages/page-invoice.html"><i class="fa fa-circle-thin"></i>Invoice</a></li>
-                        <li><a href="pages/page-pace.html"><i class="fa fa-circle-thin"></i>Pace</a></li>
-                        <li><a href="pages/page-pricing.html"><i class="fa fa-circle-thin"></i>Pricing</a></li>
-                    </ul>
-                </li>
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li class="active"><a href="index.html"><i class="fa fa-circle-thin"></i>Dashboard 1</a></li>--}}
+{{--                        <li><a href="index2.html"><i class="fa fa-circle-thin"></i>Dashboard 2</a></li>--}}
+{{--                        <li><a href="index3.html"><i class="fa fa-circle-thin"></i>Dashboard 3</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-layout-grid2"></i>--}}
+{{--                        <span>App</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/app-chat.html"><i class="fa fa-circle-thin"></i>Chat app</a></li>--}}
+{{--                        <li><a href="pages/app-contact.html"><i class="fa fa-circle-thin"></i>Contact / Employee</a></li>--}}
+{{--                        <li><a href="pages/app-calendar.html"><i class="fa fa-circle-thin"></i>Calendar</a></li>--}}
+{{--                        <li><a href="pages/app-profile.html"><i class="fa fa-circle-thin"></i>Profile</a></li>--}}
+{{--                        <li><a href="pages/app-userlist-grid.html"><i class="fa fa-circle-thin"></i>Userlist Grid</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li>--}}
+{{--                    <a href="pages/mailbox.html">--}}
+{{--                        <i class="ti-email"></i> <span>Mailbox</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <small class="label pull-right bg-warning">12</small>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-layers"></i> <span>Pages</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/page-blank.html"><i class="fa fa-circle-thin"></i>Blank</a></li>--}}
+{{--                        <li><a href="pages/page-coming-soon.html"><i class="fa fa-circle-thin"></i>Coming Soon</a></li>--}}
+{{--                        <li><a href="pages/page-faq.html"><i class="fa fa-circle-thin"></i>FAQ</a></li>--}}
+{{--                        <li><a href="pages/page-gallery.html"><i class="fa fa-circle-thin"></i>Gallery</a></li>--}}
+{{--                        <li><a href="pages/page-invoice.html"><i class="fa fa-circle-thin"></i>Invoice</a></li>--}}
+{{--                        <li><a href="pages/page-pace.html"><i class="fa fa-circle-thin"></i>Pace</a></li>--}}
+{{--                        <li><a href="pages/page-pricing.html"><i class="fa fa-circle-thin"></i>Pricing</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-palette"></i>--}}
+{{--                        <span>UI Elements</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/ui-border-utilities.html"><i class="fa fa-circle-thin"></i>Border</a></li>--}}
+{{--                        <li><a href="pages/ui-buttons.html"><i class="fa fa-circle-thin"></i>Buttons</a></li>--}}
+{{--                        <li><a href="pages/ui-color-utilities.html"><i class="fa fa-circle-thin"></i>Color</a></li>--}}
+{{--                        <li><a href="pages/ui-dropdown.html"><i class="fa fa-circle-thin"></i>Dropdown</a></li>--}}
+{{--                        <li><a href="pages/ui-general.html"><i class="fa fa-circle-thin"></i>General</a></li>--}}
+{{--                        <li><a href="pages/ui-icons.html"><i class="fa fa-circle-thin"></i>Icons</a></li>--}}
+{{--                        <li><a href="pages/ui-media-advanced.html"><i class="fa fa-circle-thin"></i>Advanced Medias</a></li>--}}
+{{--                        <li><a href="pages/ui-modals.html"><i class="fa fa-circle-thin"></i>Modals</a></li>--}}
+{{--                        <li><a href="pages/ui-notification.html"><i class="fa fa-circle-thin"></i>Notification</a></li>--}}
+{{--                        <li><a href="pages/ui-portlet-draggable.html"><i class="fa fa-circle-thin"></i>Draggable Portlets</a></li>--}}
+{{--                        <li><a href="pages/ui-ribbons.html"><i class="fa fa-circle-thin"></i>Ribbons</a></li>--}}
+{{--                        <li><a href="pages/ui-sliders.html"><i class="fa fa-circle-thin"></i>Sliders</a></li>--}}
+{{--                        <li><a href="pages/ui-sweatalert.html"><i class="fa fa-circle-thin"></i>Sweet Alert</a></li>--}}
+{{--                        <li><a href="pages/ui-tab.html"><i class="fa fa-circle-thin"></i>Tabs</a></li>--}}
+{{--                        <li><a href="pages/ui-timeline.html"><i class="fa fa-circle-thin"></i>Timeline</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-comment-alt"></i>--}}
+{{--                        <span>Widgets</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/widgets.html"><i class="fa fa-circle-thin"></i>Widgets</a></li>--}}
+{{--                        <li><a href="pages/widgets-chart.html"><i class="fa fa-circle-thin"></i>Chart</a></li>--}}
+{{--                        <li><a href="pages/widgets-statistic.html"><i class="fa fa-circle-thin"></i>Statistic</a></li>--}}
+{{--                        <li><a href="pages/widgets-weather.html"><i class="fa fa-circle-thin"></i>Weather</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-layout-tab-window"></i>--}}
+{{--                        <span>Box</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/box-advanced.html"><i class="fa fa-circle-thin"></i>Advanced</a></li>--}}
+{{--                        <li><a href="pages/box-basic.html"><i class="fa fa-circle-thin"></i>Basic</a></li>--}}
+{{--                        <li><a href="pages/box-color.html"><i class="fa fa-circle-thin"></i>Color</a></li>--}}
+{{--                        <li><a href="pages/box-group.html"><i class="fa fa-circle-thin"></i>Group</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-stats-up"></i>--}}
+{{--                        <span>Charts</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/chart-chartjs.html"><i class="fa fa-circle-thin"></i>ChartJS</a></li>--}}
+{{--                        <li><a href="pages/chart-flot.html"><i class="fa fa-circle-thin"></i>Flot</a></li>--}}
+{{--                        <li><a href="pages/chart-inline.html"><i class="fa fa-circle-thin"></i>Inline charts</a></li>--}}
+{{--                        <li><a href="pages/chart-morris.html"><i class="fa fa-circle-thin"></i>Morris</a></li>--}}
+{{--                        <li><a href="pages/chart-peity.html"><i class="fa fa-circle-thin"></i>Peity</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class=" ti-clipboard"></i> <span>Forms</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/forms-advanced.html"><i class="fa fa-circle-thin"></i>Advanced Elements</a></li>--}}
+{{--                        <li><a href="pages/forms-code-editor.html"><i class="fa fa-circle-thin"></i>Code Editor</a></li>--}}
+{{--                        <li><a href="pages/forms-editors.html"><i class="fa fa-circle-thin"></i>Editors</a></li>--}}
+{{--                        <li><a href="pages/forms-validation.html"><i class="fa fa-circle-thin"></i>Form Validation</a></li>--}}
+{{--                        <li><a href="pages/forms-wizard.html"><i class="fa fa-circle-thin"></i>Form Wizard</a></li>--}}
+{{--                        <li><a href="pages/forms-general.html"><i class="fa fa-circle-thin"></i>General Elements</a></li>--}}
+{{--                        <li><a href="pages/forms-mask.html"><i class="fa fa-circle-thin"></i>Formatter</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
                 <li class="treeview">
                     <a href="#">
-                        <i class="ti-palette"></i>
-                        <span>UI Elements</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/ui-border-utilities.html"><i class="fa fa-circle-thin"></i>Border</a></li>
-                        <li><a href="pages/ui-buttons.html"><i class="fa fa-circle-thin"></i>Buttons</a></li>
-                        <li><a href="pages/ui-color-utilities.html"><i class="fa fa-circle-thin"></i>Color</a></li>
-                        <li><a href="pages/ui-dropdown.html"><i class="fa fa-circle-thin"></i>Dropdown</a></li>
-                        <li><a href="pages/ui-general.html"><i class="fa fa-circle-thin"></i>General</a></li>
-                        <li><a href="pages/ui-icons.html"><i class="fa fa-circle-thin"></i>Icons</a></li>
-                        <li><a href="pages/ui-media-advanced.html"><i class="fa fa-circle-thin"></i>Advanced Medias</a></li>
-                        <li><a href="pages/ui-modals.html"><i class="fa fa-circle-thin"></i>Modals</a></li>
-                        <li><a href="pages/ui-notification.html"><i class="fa fa-circle-thin"></i>Notification</a></li>
-                        <li><a href="pages/ui-portlet-draggable.html"><i class="fa fa-circle-thin"></i>Draggable Portlets</a></li>
-                        <li><a href="pages/ui-ribbons.html"><i class="fa fa-circle-thin"></i>Ribbons</a></li>
-                        <li><a href="pages/ui-sliders.html"><i class="fa fa-circle-thin"></i>Sliders</a></li>
-                        <li><a href="pages/ui-sweatalert.html"><i class="fa fa-circle-thin"></i>Sweet Alert</a></li>
-                        <li><a href="pages/ui-tab.html"><i class="fa fa-circle-thin"></i>Tabs</a></li>
-                        <li><a href="pages/ui-timeline.html"><i class="fa fa-circle-thin"></i>Timeline</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-comment-alt"></i>
-                        <span>Widgets</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/widgets.html"><i class="fa fa-circle-thin"></i>Widgets</a></li>
-                        <li><a href="pages/widgets-chart.html"><i class="fa fa-circle-thin"></i>Chart</a></li>
-                        <li><a href="pages/widgets-statistic.html"><i class="fa fa-circle-thin"></i>Statistic</a></li>
-                        <li><a href="pages/widgets-weather.html"><i class="fa fa-circle-thin"></i>Weather</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-layout-tab-window"></i>
-                        <span>Box</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/box-advanced.html"><i class="fa fa-circle-thin"></i>Advanced</a></li>
-                        <li><a href="pages/box-basic.html"><i class="fa fa-circle-thin"></i>Basic</a></li>
-                        <li><a href="pages/box-color.html"><i class="fa fa-circle-thin"></i>Color</a></li>
-                        <li><a href="pages/box-group.html"><i class="fa fa-circle-thin"></i>Group</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-stats-up"></i>
-                        <span>Charts</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/chart-chartjs.html"><i class="fa fa-circle-thin"></i>ChartJS</a></li>
-                        <li><a href="pages/chart-flot.html"><i class="fa fa-circle-thin"></i>Flot</a></li>
-                        <li><a href="pages/chart-inline.html"><i class="fa fa-circle-thin"></i>Inline charts</a></li>
-                        <li><a href="pages/chart-morris.html"><i class="fa fa-circle-thin"></i>Morris</a></li>
-                        <li><a href="pages/chart-peity.html"><i class="fa fa-circle-thin"></i>Peity</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class=" ti-clipboard"></i> <span>Forms</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/forms-advanced.html"><i class="fa fa-circle-thin"></i>Advanced Elements</a></li>
-                        <li><a href="pages/forms-code-editor.html"><i class="fa fa-circle-thin"></i>Code Editor</a></li>
-                        <li><a href="pages/forms-editors.html"><i class="fa fa-circle-thin"></i>Editors</a></li>
-                        <li><a href="pages/forms-validation.html"><i class="fa fa-circle-thin"></i>Form Validation</a></li>
-                        <li><a href="pages/forms-wizard.html"><i class="fa fa-circle-thin"></i>Form Wizard</a></li>
-                        <li><a href="pages/forms-general.html"><i class="fa fa-circle-thin"></i>General Elements</a></li>
-                        <li><a href="pages/forms-mask.html"><i class="fa fa-circle-thin"></i>Formatter</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-layout-cta-btn-left"></i> <span>Tables</span>
+                        <i class="ti-layout-cta-btn-left"></i> <span>Users</span>
                         <span class="pull-right-container">
               <i class="fa fa-caret-down pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="pages/tables-simple.html"><i class="fa fa-circle-thin"></i>Simple tables</a></li>
-                        <li><a href="pages/tables-data.html"><i class="fa fa-circle-thin"></i>Data tables</a></li>
+                        <li><a href="{{route('users.index')}}"><i class="fa fa-circle-thin"></i>Users list</a></li>
                         <li><a href="pages/tables-editable.html"><i class="fa fa-circle-thin"></i>Editable Tables</a></li>
                     </ul>
                 </li>
 
-                <li class="treeview">
-                    <a href="#"><i class="ti-signal"></i> <span>Authentication</span>
-                        <span class="pull-right-container">
-			  <i class="fa fa-caret-down pull-right"></i>
-			</span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/auth-login.html"><i class="fa fa-circle"></i>Login</a></li>
-                        <li><a href="pages/auth-register.html"><i class="fa fa-circle"></i>Register</a></li>
-                        <li><a href="pages/auth-lockscreen.html"><i class="fa fa-circle"></i>Lockscreen</a></li>
-                        <li><a href="pages/auth-user-pass.html"><i class="fa fa-circle"></i>Recover password</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#"><i class="ti-alert"></i> <span>Error Pages</span>
-                        <span class="pull-right-container">
-			  <i class="fa fa-caret-down pull-right"></i>
-			</span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/error-404.html"><i class="fa fa-circle"></i>404</a></li>
-                        <li><a href="pages/error-500.html"><i class="fa fa-circle"></i>500</a></li>
-                        <li><a href="pages/error-maintenance.html"><i class="fa fa-circle"></i>Maintenance</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-map-alt"></i> <span>Map</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/map-google.html"><i class="fa fa-circle-thin"></i>Google Map</a></li>
-                        <li><a href="pages/map-vector.html"><i class="fa fa-circle-thin"></i>Vector Map</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-plug"></i> <span>Extension</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/extension-fullscreen.html"><i class="fa fa-circle-thin"></i>Fullscreen</a></li>
-                    </ul>
-                </li>
+{{--                <li class="treeview">--}}
+{{--                    <a href="#"><i class="ti-signal"></i> <span>Authentication</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--			  <i class="fa fa-caret-down pull-right"></i>--}}
+{{--			</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/auth-login.html"><i class="fa fa-circle"></i>Login</a></li>--}}
+{{--                        <li><a href="pages/auth-register.html"><i class="fa fa-circle"></i>Register</a></li>--}}
+{{--                        <li><a href="pages/auth-lockscreen.html"><i class="fa fa-circle"></i>Lockscreen</a></li>--}}
+{{--                        <li><a href="pages/auth-user-pass.html"><i class="fa fa-circle"></i>Recover password</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#"><i class="ti-alert"></i> <span>Error Pages</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--			  <i class="fa fa-caret-down pull-right"></i>--}}
+{{--			</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/error-404.html"><i class="fa fa-circle"></i>404</a></li>--}}
+{{--                        <li><a href="pages/error-500.html"><i class="fa fa-circle"></i>500</a></li>--}}
+{{--                        <li><a href="pages/error-maintenance.html"><i class="fa fa-circle"></i>Maintenance</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-map-alt"></i> <span>Map</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/map-google.html"><i class="fa fa-circle-thin"></i>Google Map</a></li>--}}
+{{--                        <li><a href="pages/map-vector.html"><i class="fa fa-circle-thin"></i>Vector Map</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-plug"></i> <span>Extension</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="pages/extension-fullscreen.html"><i class="fa fa-circle-thin"></i>Fullscreen</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
-                <li class="treeview">
-                    <a href="#">
-                        <i class="ti-layout-accordion-separated"></i> <span>Multilevel</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#">Level One</a></li>
-                        <li class="treeview">
-                            <a href="#">Level One
-                                <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="#">Level Two</a></li>
-                                <li class="treeview">
-                                    <a href="#">Level Two
-                                        <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#">Level Three</a></li>
-                                        <li><a href="#">Level Three</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Level One</a></li>
-                    </ul>
-                </li>
+{{--                <li class="treeview">--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="ti-layout-accordion-separated"></i> <span>Multilevel</span>--}}
+{{--                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="treeview-menu">--}}
+{{--                        <li><a href="#">Level One</a></li>--}}
+{{--                        <li class="treeview">--}}
+{{--                            <a href="#">Level One--}}
+{{--                                <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                            </a>--}}
+{{--                            <ul class="treeview-menu">--}}
+{{--                                <li><a href="#">Level Two</a></li>--}}
+{{--                                <li class="treeview">--}}
+{{--                                    <a href="#">Level Two--}}
+{{--                                        <span class="pull-right-container">--}}
+{{--              <i class="fa fa-caret-down pull-right"></i>--}}
+{{--            </span>--}}
+{{--                                    </a>--}}
+{{--                                    <ul class="treeview-menu">--}}
+{{--                                        <li><a href="#">Level Three</a></li>--}}
+{{--                                        <li><a href="#">Level Three</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
+{{--                        <li><a href="#">Level One</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
-            </ul>
+{{--            </ul>--}}
         </section>
     </aside>
 
