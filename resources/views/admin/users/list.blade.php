@@ -33,17 +33,23 @@
                                     <th>Address</th>
                                 </tr>
                                 </thead>
-                                @foreach($user as $key=>$u)
                                 <tbody>
-                                <tr>
+                                @forelse($users as $key=>$user)
+
+                                    <tr>
                                     <td>{{++$key}}</td>
-                                    <td>{{$u->name}}</td>
-                                    <td>{{$u->phone}}</td>
-                                    <td>{{$u->email}}</td>
-                                    <td>{{$u->address}}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->phone}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->address}}</td>
                                 </tr>
+                                    @empty
+                                    <tr>
+                                        <td colspan="5" class="text-center">No data</td>
+                                    </tr>
+                                @endforelse
+
                                 </tbody>
-                                    @endforeach
                             </table>
                         </div>
                     </div>
