@@ -15,4 +15,9 @@ trait DefaultConstants
     public $defaultAdminPassword = "admin";
     public $defaultAdminRole = RoleConstant::ADMIN;
 
+    public $secondAdminUserName = "admin2@gmail.com";
+    public $secondAdminName = "Admin2";
+    public $secondAdminPhone = "092676352";
+    public $secondAdminPassword = "admin2";
+    public $secondAdminRole = RoleConstant::ADMIN;
 }

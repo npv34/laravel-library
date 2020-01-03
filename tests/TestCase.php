@@ -39,4 +39,15 @@ abstract class TestCase extends BaseTestCase
         $user->role = $this->defaultAdminRole;
         return $user;
     }
+
+    public function getNewSecondAdmin()
+    {
+        $user = new User();
+        $user->name = $this->secondAdminName;
+        $user->email = $this->secondAdminUserName;
+        $user->phone = $this->secondAdminPhone;
+        $user->password = Hash::make($this->defaultAdminPassword);
+        $user->role = $this->secondAdminRole;
+        return $user;
+    }
 }
