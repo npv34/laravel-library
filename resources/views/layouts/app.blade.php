@@ -55,20 +55,12 @@
             <!-- sidebar menu-->
             <ul class="sidebar-menu" data-widget="tree">
 
-                <li class="treeview active">
-                    <a href="#">
+                <li class="treeview">
+                    <a href="{{ route('home') }}">
                         <i class="ti-dashboard"></i>
                         <span>Dashboard</span>
-                        <span class="pull-right-container">
-{{--              <i class="fa fa-caret-down pull-right"></i>--}}
-{{--            </span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="treeview-menu">--}}
-{{--                        <li class="active"><a href="index.html"><i class="fa fa-circle-thin"></i>Dashboard 1</a></li>--}}
-{{--                        <li><a href="index2.html"><i class="fa fa-circle-thin"></i>Dashboard 2</a></li>--}}
-{{--                        <li><a href="index3.html"><i class="fa fa-circle-thin"></i>Dashboard 3</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+                    </a>
+                </li>
 {{--                <li class="treeview">--}}
 {{--                    <a href="#">--}}
 {{--                        <i class="ti-layout-grid2"></i>--}}
@@ -200,17 +192,16 @@
 {{--                        <li><a href="pages/forms-mask.html"><i class="fa fa-circle-thin"></i>Formatter</a></li>--}}
 {{--                    </ul>--}}
 {{--                </li>--}}
-                <li class="treeview">
+                <li class="treeview {{ (request()->is('admin/users*')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="ti-layout-cta-btn-left"></i> <span>Users</span>
                         <span class="pull-right-container">
-              <i class="fa fa-caret-down pull-right"></i>
-            </span>
+                        <i class="fa fa-caret-down pull-right"></i>
+                        </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="pages/tables-simple.html"><i class="fa fa-circle-thin"></i>Simple tables</a></li>
                         <li><a href="{{route('users.index')}}"><i class="fa fa-circle-thin"></i>Users list</a></li>
-                        <li><a href="pages/tables-editable.html"><i class="fa fa-circle-thin"></i>Editable Tables</a></li>
+                        <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-thin"></i>Add user</a></li>
                     </ul>
                 </li>
 
