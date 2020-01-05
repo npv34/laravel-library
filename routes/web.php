@@ -13,13 +13,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (){
+    return redirect('admin');
 });
 
 Auth::routes();
 
-Route::prefix('admin')->group(function (){
+Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('/', 'HomeController@index')->name('home');
     Route::prefix('users')->group(function (){
         Route::get('/', 'UserController@index')->name('users.index');
