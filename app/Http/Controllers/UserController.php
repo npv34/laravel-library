@@ -63,9 +63,22 @@ class UserController extends Controller
 
     public function restore($id)
     {
-        $user = User::findOrFail($id);
-        $user->withTrashed()->find($id)->restore();
-        return redirect()->route('users.index');
+        $user = User::onlyTrashed()->find($id);
+        $user->restore();
+        Session::flash('success', 'Phục hồi thành công');
+        return redirect()->route('users.trash');
+    }
+
+    public function getTrash()
+    {
+        $usersOfTrash = User::onlyTrashed()->get();
+        return view('admin.users.trash', compact('usersOfTrash'));
+    }
+    public function forceDelete($id) {
+        $userOfForce = User::onlyTrashed()->find($id);
+        $userOfForce->forceDelete();
+        Session::flash('success', 'Xóa vĩnh viễn thành công');
+        return redirect()->route('users.trash');
     }
 
 }
