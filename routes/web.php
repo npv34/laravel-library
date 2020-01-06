@@ -28,5 +28,6 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/{id}/edit','UserController@edit')->name('users.edit');
         Route::post('/{id}/update','UserController@update')->name('users.update');
         Route::get('/{id}/delete','UserController@destroy')->name('users.destroy');
+        Route::get('/{id}/restore','UserController@restore')->name('users.restore');
     });
 });

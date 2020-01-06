@@ -10,16 +10,19 @@ use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $users = User::all();
         return view('admin.users.list', compact('users'));
     }
 
-    public function create() {
+    public function create()
+    {
         return view('admin.users.create');
     }
 
-    public function store(CreateUserRequest $request) {
+    public function store(CreateUserRequest $request)
+    {
         $user = new User();
         $user->name = $request->name;
         $user->phone = $request->phone;
@@ -32,12 +35,14 @@ class UserController extends Controller
         return redirect()->route('users.index');
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $user = User::findOrFail($id);
-        return view('admin.users.edit',compact('user'));
+        return view('admin.users.edit', compact('user'));
     }
 
-    public function update(Request $request,$id) {
+    public function update(Request $request, $id)
+    {
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->phone = $request->phone;
@@ -48,10 +53,18 @@ class UserController extends Controller
         return redirect()->route('users.index');
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
         $user = User::findOrFail($id);
         $user->delete();
         Session::flash('success', 'Xóa thành công');
+        return redirect()->route('users.index');
+    }
+
+    public function restore($id)
+    {
+        $user = User::findOrFail($id);
+        $user->withTrashed()->find($id)->restore();
         return redirect()->route('users.index');
     }
 
