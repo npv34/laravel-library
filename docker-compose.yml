@@ -2,24 +2,24 @@ version: "3"
 services:
   server:
     image: nginx
-    container_name: nginx_server_library
+    container_name: nginx.library
     ports:
       - 8010:80
   backend:
     build: .
-    container_name: laravel-library
+    container_name: app.library
     ports:
       - 8000:8000
     volumes:
       - .:/app
   db:
     image: mysql:5.7
-    container_name: library.db
+    container_name: db.library
     hostname: library.db
     volumes:
       - ./data/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1
-      MYSQL_DATABASE: book_management
+      MYSQL_DATABASE: library
     ports:
       - 3307:3306
