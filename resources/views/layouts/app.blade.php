@@ -204,6 +204,19 @@
                         <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-thin"></i>Add user</a></li>
                     </ul>
                 </li>
+                <li class="treeview {{ (request()->is('admin/libraries*')) ? 'active' : '' }}">
+                    <a href="#">
+                        <i class="ti-layout-cta-btn-left"></i> <span>Libraries</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-caret-down pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('libraries.index')}}"><i class="fa fa-circle-thin"></i>Libraries list</a></li>
+{{--                        <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-thin"></i>Add user</a></li>--}}
+                    </ul>
+                </li>
+
 
 {{--                <li class="treeview">--}}
 {{--                    <a href="#"><i class="ti-signal"></i> <span>Authentication</span>--}}
