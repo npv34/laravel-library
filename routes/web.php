@@ -32,4 +32,9 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/{id}/restore','UserController@restore')->name('users.restore');
         Route::get('/{id}/forceDelete','UserController@forceDelete')->name('users.forceDelete');
     });
+    Route::prefix('libraries')->group(function () {
+        Route::get('/','LibraryController@index')->name('libraries.index');
+        Route::get('/create','LibraryController@create')->name('libraries.create');
+        Route::post('/create','LibraryController@store')->name('libraries.store');
+    });
 });

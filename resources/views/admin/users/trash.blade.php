@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
             <li class="breadcrumb-item"><a href="#">Users</a></li>
-            <li class="breadcrumb-item active">Users table</li>
+            <li class="breadcrumb-item active">Users of Trash Table</li>
         </ol>
     </section>
     <section class="content">
@@ -16,7 +16,7 @@
             <div class="col-12">
                 <div class="box">
                     <div class="box-header with-border bg-light">
-                        <h4 class="box-title">List Users</h4>
+                        <h4 class="box-title">List Users of Trash</h4>
                         <div class="box-controls pull-right">
                             <button id="row-count" class="btn btn-xs btn-primary">Row count</button>
                         </div>
