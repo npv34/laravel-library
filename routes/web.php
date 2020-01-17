@@ -17,6 +17,9 @@ Route::get('/', function (){
     return redirect('admin');
 });
 
+Route::get('/users', 'UserController@index')->name('users.index');
+
+
 Auth::routes();
 
 Route::middleware('auth')->prefix('admin')->group(function (){
