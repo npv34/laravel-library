@@ -3,7 +3,6 @@
     <section class="content-header">
         <h1>
             <a href="{{ route('libraries.index') }}" class="text-success">Đang hoạt động ( {{count($libraries)}})</a> |
-            <a href="" class="text-success">Đã xóa </a>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
@@ -49,7 +48,7 @@
                                         <td>{{$library->address}}</td>
                                         <td><img src="{{ asset('storage/'. $library->avatar)}}" height="80px" width="80px"></td>
                                         <td><a href="{{route('libraries.edit',$library->id)}}" class="btn btn-success">Edit</a></td>
-                                        <td><a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
+                                        <td><a href="{{ route('libraries.destroy',$library->id) }}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                     </tr>
                                 @empty
                                     <tr>
