@@ -24,10 +24,12 @@ class LibraryService
         $library->name = $request->name;
         $library->address = $request->address;
         $library->phone = $request->phone;
-        if ($files = $request->file('avatar')) {
-            $destinationPath = 'public/images/';
-            $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
-            $files->move($destinationPath, $profileImage);
+        $file = $request->file('avatar');
+        if ($file) {
+            //upload img len server
+            $path = $file->store('images', 'public');
+            $library->avatar = $path;
+
         }
         $this->libraryRepo->save($library);
     }

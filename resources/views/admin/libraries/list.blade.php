@@ -47,7 +47,7 @@
                                         <td>{{$library->name}}</td>
                                         <td>{{$library->phone}}</td>
                                         <td>{{$library->address}}</td>
-                                        <td><img src="{{asset('images/'.$library->avatar)}}" height="80px" width="80px"></td>
+                                        <td><img src="{{ asset('storage/'. $library->avatar)}}" height="80px" width="80px"></td>
                                         <td><a href="" class="btn btn-success">Edit</a></td>
                                         <td><a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                     </tr>

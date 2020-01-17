@@ -27,7 +27,7 @@ class CreateLibraryRequest extends FormRequest
             'name' => 'required',
             'address' => 'required',
             'phone' => 'required',
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'avatar' => 'required|image'
         ];
     }
     public function messages()
