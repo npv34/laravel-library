@@ -28,4 +28,5 @@ class LibraryController extends Controller
         Session::flash('success', 'Thêm thành công');
         return redirect()->route('libraries.index');
     }
+    public function edit()
 }
