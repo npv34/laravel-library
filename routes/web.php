@@ -39,5 +39,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/','LibraryController@index')->name('libraries.index');
         Route::get('/create','LibraryController@create')->name('libraries.create');
         Route::post('/create','LibraryController@store')->name('libraries.store');
+        Route::get('/{id}/edit','LibraryController@edit')->name('libraries.edit');
+        Route::post('/{id}/update','LibraryController@update')->name('libraries.update');
     });
 });
