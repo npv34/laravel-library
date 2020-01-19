@@ -192,6 +192,7 @@
 {{--                        <li><a href="pages/forms-mask.html"><i class="fa fa-circle-thin"></i>Formatter</a></li>--}}
 {{--                    </ul>--}}
 {{--                </li>--}}
+                @can('crud-users')
                 <li class="treeview {{ (request()->is('admin/users*')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="ti-layout-cta-btn-left"></i> <span>Users</span>
@@ -204,6 +205,8 @@
                         <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-thin"></i>Add user</a></li>
                     </ul>
                 </li>
+               @endcan
+
                 <li class="treeview {{ (request()->is('admin/libraries*')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="ti-layout-cta-btn-left"></i> <span>Libraries</span>
