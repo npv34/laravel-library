@@ -2,7 +2,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            <a href="{{ route('libraries.index') }}" class="text-success">Đang hoạt động ( {{count($libraries)}})</a> |
+            <a href="{{ route('libraries.index') }}" class="text-success">Đang hoạt động ( {{count($libraries)}})</a>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
