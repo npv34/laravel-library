@@ -6,7 +6,7 @@ namespace App\Repositories;
 
 use App\Library;
 
-class LibraryRepository
+class LibraryRepository extends BaseRepository
 {
     protected $library;
     public function __construct(Library $library)
@@ -17,10 +17,7 @@ class LibraryRepository
     {
         return $this->library->all();
     }
-    public function save($library)
-    {
-        $library->save();
-    }
+
 
 
 }

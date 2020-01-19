@@ -39,5 +39,13 @@ class AppServiceProvider extends ServiceProvider
             }
             return false;
         });
+        Gate::define('crud-categories', function ($user) {
+            //logic
+            if ($user->role == RoleConstant::ADMIN) {
+                return true;
+            }
+            return false;
+        });
+
     }
 }

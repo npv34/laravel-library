@@ -43,4 +43,9 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::post('/{id}/update','LibraryController@update')->name('libraries.update');
         Route::get('/{id}/delete','LibraryController@destroy')->name('libraries.destroy');
     });
+    Route::prefix('categories')->group(function () {
+        Route::get('/','CategoryController@index')->name('categories.index');
+        Route::get('/create','CategoryController@create')->name('categories.create');
+        Route::post('/create','CategoryController@store')->name('categories.store');
+    });
 });
