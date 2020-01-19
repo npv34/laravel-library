@@ -44,4 +44,34 @@ class CategoryController extends Controller
         return redirect()->route('categories.index');
 
     }
+    public function edit($id)
+    {
+        if (!Gate::allows('crud-categories')) {
+            abort(403);
+        }
+        $category = $this->cateService->findById($id);
+        return view('admin.categories.edit', compact('category'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        if (!Gate::allows('crud-categories')) {
+            abort(403);
+        }
+        $user = $this->cateService->findById($id);
+        $this->cateService->update($request, $user);
+        Session::flash('success', 'Cập nhật thành công');
+        return redirect()->route('categories.index');
+    }
+
+    public function destroy($id)
+    {
+        if (!Gate::allows('crud-categories')) {
+            abort(403);
+        }
+        $user = $this->cateService->findById($id);
+        $this->cateService->delete($user);
+        Session::flash('success', 'Xóa thành công');
+        return redirect()->route('categories.index');
+    }
 }

@@ -24,4 +24,17 @@ class CategoryService
         $category->name = $request->name;
         $this->cateRepo->save($category);
     }
+    public function findById($id)
+    {
+        return $this->cateRepo->findById($id);
+    }
+    public function update($request,$category)
+    {
+        $category->name = $request->name;
+        $this->cateRepo->save($category);
+    }
+    public function delete($category)
+    {
+        $this->cateRepo->delete($category);
+    }
 }

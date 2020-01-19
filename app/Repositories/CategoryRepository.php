@@ -19,4 +19,10 @@ class CategoryRepository extends BaseRepository
     {
         return $this->category->all();
     }
+
+    public function findById($id)
+    {
+        return $this->category->findOrFail($id);
+    }
+
 }

@@ -6,8 +6,8 @@
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Libraries</a></li>
-            <li class="breadcrumb-item active">Libraries table</li>
+            <li class="breadcrumb-item"><a href="#">Categories</a></li>
+            <li class="breadcrumb-item active">Categories table</li>
         </ol>
     </section>
     <section class="content">
@@ -41,8 +41,8 @@
                                     <tr>
                                         <td>{{++$key}}</td>
                                         <td>{{$category->name}}</td>
-                                        <td><a href="" class="btn btn-success">Edit</a></td>
-                                        <td><a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
+                                        <td><a href="{{ route('categories.edit',$category->id) }}" class="btn btn-success">Edit</a></td>
+                                        <td><a href="{{ route('categories.destroy',$category->id) }}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                     </tr>
                                 @empty
                                     <tr>
