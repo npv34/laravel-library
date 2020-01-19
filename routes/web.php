@@ -41,5 +41,6 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::post('/create','LibraryController@store')->name('libraries.store');
         Route::get('/{id}/edit','LibraryController@edit')->name('libraries.edit');
         Route::post('/{id}/update','LibraryController@update')->name('libraries.update');
+        Route::get('/{id}/delete','LibraryController@destroy')->name('libraries.destroy');
     });
 });

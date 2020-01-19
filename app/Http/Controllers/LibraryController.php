@@ -57,4 +57,11 @@ class LibraryController extends Controller
         Session::flash('success', 'Cập nhật thành công');
         return redirect()->route('libraries.index');
     }
+    public function destroy($id)
+    {
+        $library = Library::findOrFail($id);
+        $library->delete();
+        Session::flash('success', 'Xóa thành công');
+        return redirect()->route('libraries.index');
+    }
 }
