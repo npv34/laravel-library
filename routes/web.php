@@ -47,5 +47,8 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('/','CategoryController@index')->name('categories.index');
         Route::get('/create','CategoryController@create')->name('categories.create');
         Route::post('/create','CategoryController@store')->name('categories.store');
+        Route::get('/{id}/edit','CategoryController@edit')->name('categories.edit');
+        Route::post('/{id}/update','CategoryController@update')->name('categories.update');
+        Route::get('/{id}/delete','CategoryController@destroy')->name('categories.destroy');
     });
 });

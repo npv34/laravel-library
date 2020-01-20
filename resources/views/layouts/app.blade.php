@@ -222,7 +222,7 @@
 
 
                 @can('crud-categories')
-                <li class="treeview">
+                <li class="treeview {{ (request()->is('admin/categories*')) ? 'active' : '' }}">
                     <a href="#"><i class="ti-signal"></i> <span>Categories</span>
                         <span class="pull-right-container">
 			             <i class="fa fa-caret-down pull-right"></i>
