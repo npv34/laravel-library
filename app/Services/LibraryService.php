@@ -41,4 +41,18 @@ class LibraryService
     {
         $this->libraryRepo->delete($library);
     }
+    public function update($request, $library)
+    {
+        $library->name = $request->name;
+        $library->address = $request->address;
+        $library->phone = $request->phone;
+        $file = $request->file('avatar');
+        if ($file) {
+            //upload img len server
+            $path = $file->store('images', 'public');
+            $library->avatar = $path;
+
+        }
+        $this->libraryRepo->save($library);
+    }
 }

@@ -59,7 +59,7 @@ class LibraryController extends Controller
             abort(403);
         }
         $library = $this->libraryService->findById($id);
-        $this->libraryService->create($request, $library);
+        $this->libraryService->update($request,$library);
         Session::flash('success', 'Cập nhật thành công');
         return redirect()->route('libraries.index');
     }
