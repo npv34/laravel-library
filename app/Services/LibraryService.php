@@ -33,4 +33,12 @@ class LibraryService
         }
         $this->libraryRepo->save($library);
     }
+    public function findById($id)
+    {
+        return $this->libraryRepo->findById($id);
+    }
+    public function delete($library)
+    {
+        $this->libraryRepo->delete($library);
+    }
 }

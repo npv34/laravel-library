@@ -2,13 +2,12 @@
 @section('content')
     <section class="content-header">
         <h1>
-            <a href="" class="text-success">Đang hoạt động ( {{count($users)}})</a>|
-            <a href="{{ route('users.trash') }}">Đã xóa</a>
+            <a href="" class="text-success">Đang hoạt động ( {{count($books)}})</a>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Users</a></li>
-            <li class="breadcrumb-item active">Users table</li>
+            <li class="breadcrumb-item"><a href="#">Books</a></li>
+            <li class="breadcrumb-item active">Books table</li>
         </ol>
     </section>
     <section class="content">
@@ -16,7 +15,7 @@
             <div class="col-12">
                 <div class="box">
                     <div class="box-header with-border bg-light">
-                        <h4 class="box-title">List Users</h4>
+                        <h4 class="box-title">List Books</h4>
                         <div class="box-controls pull-right">
                             <button id="row-count" class="btn btn-xs btn-primary">Row count</button>
                         </div>
@@ -26,30 +25,37 @@
                         @if(Session::has('success'))
                             <div class="alert alert-success">{{Session::get('success')}}</div>
                         @endif
-                        <a class="btn btn-primary" href="{{route('users.create')}}">Create</a>
+                        <a class="btn btn-primary" href="{{route('books.create')}}">Create</a>
                         <div class="table-responsive">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
                                     <th>STT</th>
                                     <th>Name</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Address</th>
+                                    <th>Category</th>
+                                    <th>Avatar</th>
+                                    <th>Status</th>
+                                    <th>Description</th>
                                     <th>Handles</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @forelse($users as $key=>$user)
+                                @forelse($books as $key=>$book)
 
                                     <tr>
                                         <td>{{++$key}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->phone}}</td>
-                                        <td>{{$user->email}}</td>
-                                        <td>{{$user->address}}</td>
-                                        <td><a href="{{route('users.edit',$user->id)}}" class="btn btn-success">Edit</a></td>
-                                        <td><a href="{{route('users.destroy',$user->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
+                                        <td>{{$book->name}}</td>
+                                        <td>{{$book->category->name}}</td>
+                                        <td><img src="{{ asset('storage/'. $book->avatar)}}" height="80px" width="80px"></td>
+                                        <td>@if($book->status == 1)
+                                            Mới
+                                            @else
+                                            Cũ
+                                            @endif
+                                        </td>
+                                        <td>{{$book->desc}}</td>
+                                        <td><a href="" class="btn btn-success">Edit</a></td>
+                                        <td><a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                     </tr>
                                 @empty
                                     <tr>
