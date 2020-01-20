@@ -45,4 +45,35 @@ class BookController extends Controller
         Session::flash('success', 'Thêm thành công');
         return redirect()->route('books.index');
     }
+    public function edit($id)
+    {
+        if (!Gate::allows('crud-books')) {
+            abort(403);
+        }
+        $book = $this->bookService->findById($id);
+        $categories = $this->categoryService->getAll();
+
+        return view('manager.books.edit',compact('book','categories'));
+    }
+    public function update(Request $request, $id)
+    {
+        if (!Gate::allows('crud-books')) {
+            abort(403);
+        }
+        $book = $this->bookService->findById($id);
+        $this->bookService->update($request, $book);
+        Session::flash('success', 'Cập nhật thành công');
+        return redirect()->route('books.index');
+    }
+
+    public function destroy($id)
+    {
+        if (!Gate::allows('crud-books')) {
+            abort(403);
+        }
+        $book = $this->bookService->findById($id);
+        $this->bookService->delete($book);
+        Session::flash('success', 'Xóa thành công');
+        return redirect()->route('books.index');
+    }
 }

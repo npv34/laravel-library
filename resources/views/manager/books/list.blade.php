@@ -54,8 +54,8 @@
                                             @endif
                                         </td>
                                         <td>{{$book->desc}}</td>
-                                        <td><a href="" class="btn btn-success">Edit</a></td>
-                                        <td><a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
+                                        <td><a href="{{ route('books.edit',$book->id) }}" class="btn btn-success">Edit</a></td>
+                                        <td><a href="{{ route('books.destroy',$book->id) }}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                     </tr>
                                 @empty
                                     <tr>
