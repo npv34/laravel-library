@@ -43,7 +43,17 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::post('/{id}/update','LibraryController@update')->name('libraries.update');
         Route::get('/{id}/delete','LibraryController@destroy')->name('libraries.destroy');
     });
+<<<<<<< HEAD
     Route::prefix('books')->group(function () {
         Route::get('/','BookController@index')->name('books.index');
+=======
+    Route::prefix('categories')->group(function () {
+        Route::get('/','CategoryController@index')->name('categories.index');
+        Route::get('/create','CategoryController@create')->name('categories.create');
+        Route::post('/create','CategoryController@store')->name('categories.store');
+        Route::get('/{id}/edit','CategoryController@edit')->name('categories.edit');
+        Route::post('/{id}/update','CategoryController@update')->name('categories.update');
+        Route::get('/{id}/delete','CategoryController@destroy')->name('categories.destroy');
+>>>>>>> 267cbc2c8469b09c5852b47a4fe4a2db4300e505
     });
 });
