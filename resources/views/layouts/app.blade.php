@@ -216,24 +216,24 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{route('libraries.index')}}"><i class="fa fa-circle-thin"></i>Libraries list</a></li>
-{{--                        <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-thin"></i>Add user</a></li>--}}
+                        <li><a href="{{ route('libraries.create') }}"><i class="fa fa-circle-thin"></i>Add libraries</a></li>
                     </ul>
                 </li>
 
 
-{{--                <li class="treeview">--}}
-{{--                    <a href="#"><i class="ti-signal"></i> <span>Authentication</span>--}}
-{{--                        <span class="pull-right-container">--}}
-{{--			  <i class="fa fa-caret-down pull-right"></i>--}}
-{{--			</span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="treeview-menu">--}}
-{{--                        <li><a href="pages/auth-login.html"><i class="fa fa-circle"></i>Login</a></li>--}}
-{{--                        <li><a href="pages/auth-register.html"><i class="fa fa-circle"></i>Register</a></li>--}}
-{{--                        <li><a href="pages/auth-lockscreen.html"><i class="fa fa-circle"></i>Lockscreen</a></li>--}}
-{{--                        <li><a href="pages/auth-user-pass.html"><i class="fa fa-circle"></i>Recover password</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+                @can('crud-categories')
+                <li class="treeview {{ (request()->is('admin/categories*')) ? 'active' : '' }}">
+                    <a href="#"><i class="ti-signal"></i> <span>Categories</span>
+                        <span class="pull-right-container">
+			             <i class="fa fa-caret-down pull-right"></i>
+			            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('categories.index')}}"><i class="fa fa-circle"></i>Categories list</a></li>
+                        <li><a href="{{ route('categories.create') }}"><i class="fa fa-circle"></i>Add Categories</a></li>
+                    </ul>
+                </li>
+                @endcan
 {{--                <li class="treeview">--}}
 {{--                    <a href="#"><i class="ti-alert"></i> <span>Error Pages</span>--}}
 {{--                        <span class="pull-right-container">--}}
@@ -304,7 +304,7 @@
 {{--                    </ul>--}}
 {{--                </li>--}}
 
-{{--            </ul>--}}
+            </ul>
         </section>
     </aside>
 
