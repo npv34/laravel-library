@@ -15,20 +15,20 @@ class UserTableSeeder extends Seeder
         $user->name = 'hang';
         $user->phone = '1345678';
         $user->email  = 'hang@gmail.com';
-        $user->password = '12345678';
+        $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->address = 'hn';
         $user->avatar = 'fghjk';
-        $user->role = '1';
+        $user->role = \App\Http\Controllers\RoleConstant::ADMIN;
         $user->save();
 
         $user = new \App\User();
         $user->name = 'minh';
         $user->phone = '1345678';
         $user->email  = 'minh@gmail.com';
-        $user->password = '12345678';
+        $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->address = 'hd';
         $user->avatar = 'fghjk';
-        $user->role = '0';
+        $user->role = \App\Http\Controllers\RoleConstant::MANAGEMENT;
         $user->save();
 
         $user = new \App\User();

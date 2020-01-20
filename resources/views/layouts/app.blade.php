@@ -207,6 +207,7 @@
                 </li>
                @endcan
 
+                @can('crud-libraries')
                 <li class="treeview {{ (request()->is('admin/libraries*')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="ti-layout-cta-btn-left"></i> <span>Libraries</span>
@@ -219,7 +220,7 @@
                         <li><a href="{{ route('libraries.create') }}"><i class="fa fa-circle-thin"></i>Add libraries</a></li>
                     </ul>
                 </li>
-
+                @endcan
 
                 @can('crud-categories')
                 <li class="treeview {{ (request()->is('admin/categories*')) ? 'active' : '' }}">
@@ -234,18 +235,20 @@
                     </ul>
                 </li>
                 @endcan
-{{--                <li class="treeview">--}}
-{{--                    <a href="#"><i class="ti-alert"></i> <span>Error Pages</span>--}}
-{{--                        <span class="pull-right-container">--}}
-{{--			  <i class="fa fa-caret-down pull-right"></i>--}}
-{{--			</span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="treeview-menu">--}}
-{{--                        <li><a href="pages/error-404.html"><i class="fa fa-circle"></i>404</a></li>--}}
-{{--                        <li><a href="pages/error-500.html"><i class="fa fa-circle"></i>500</a></li>--}}
-{{--                        <li><a href="pages/error-maintenance.html"><i class="fa fa-circle"></i>Maintenance</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+
+                @can('crud-books')
+                <li class="treeview">
+                    <a href="#"><i class="ti-alert"></i> <span>Books</span>
+                        <span class="pull-right-container">
+			  <i class="fa fa-caret-down pull-right"></i>
+			</span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('books.index') }}"><i class="fa fa-circle"></i>Books list</a></li>
+                        <li><a href="pages/error-500.html"><i class="fa fa-circle"></i>500</a></li>
+                    </ul>
+                </li>
+                @endcan
 {{--                <li class="treeview">--}}
 {{--                    <a href="#">--}}
 {{--                        <i class="ti-map-alt"></i> <span>Map</span>--}}

@@ -33,4 +33,26 @@ class LibraryService
         }
         $this->libraryRepo->save($library);
     }
+    public function findById($id)
+    {
+        return $this->libraryRepo->findById($id);
+    }
+    public function delete($library)
+    {
+        $this->libraryRepo->delete($library);
+    }
+    public function update($request, $library)
+    {
+        $library->name = $request->name;
+        $library->address = $request->address;
+        $library->phone = $request->phone;
+        $file = $request->file('avatar');
+        if ($file) {
+            //upload img len server
+            $path = $file->store('images', 'public');
+            $library->avatar = $path;
+
+        }
+        $this->libraryRepo->save($library);
+    }
 }

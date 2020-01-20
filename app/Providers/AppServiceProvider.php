@@ -46,6 +46,20 @@ class AppServiceProvider extends ServiceProvider
             }
             return false;
         });
+        Gate::define('crud-libraries', function ($user) {
+            //logic
+            if ($user->role == RoleConstant::ADMIN) {
+                return true;
+            }
+            return false;
+        });
+        Gate::define('crud-books', function ($user) {
+            //logic
+            if ($user->role == RoleConstant::MANAGEMENT) {
+                return true;
+            }
+            return false;
+        });
 
     }
 }

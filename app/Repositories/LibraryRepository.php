@@ -17,7 +17,10 @@ class LibraryRepository extends BaseRepository
     {
         return $this->library->all();
     }
-
+    public function findById($id)
+    {
+        return $this->library->findOrFail($id);
+    }
 
 
 }
