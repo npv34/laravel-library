@@ -25,9 +25,22 @@ class CustomerService
     public function create($request)
     {
         $customer = new Customer();
+        $customer->name = $request->name;
         $customer->codeID = $request->codeID;
         $customer->class = $request->class;
         $customer->dob = $request->dob;
         $this->customerRepo->save($customer);
+    }
+    public function update($request,$customer)
+    {
+        $customer->name = $request->name;
+        $customer->codeID = $request->codeID;
+        $customer->class = $request->class;
+        $customer->dob = $request->dob;
+        $this->customerRepo->save($customer);
+    }
+    public function delete($customer)
+    {
+        $this->customerRepo->delete($customer);
     }
 }
