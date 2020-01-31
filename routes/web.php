@@ -59,4 +59,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('/{id}/update', 'CategoryController@update')->name('categories.update');
         Route::get('/{id}/delete', 'CategoryController@destroy')->name('categories.destroy');
     });
+    Route::prefix('customers')->group(function (){
+        Route::get('/','CustomerController@index')->name('customers.index');
+        Route::get('/create','CustomerController@create')->name('customers.create');
+        Route::post('/create','CustomerController@store')->name('customers.store');
+
+    });
 });

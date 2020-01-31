@@ -249,18 +249,20 @@
                     </ul>
                 </li>
                 @endcan
-{{--                <li class="treeview">--}}
-{{--                    <a href="#">--}}
-{{--                        <i class="ti-map-alt"></i> <span>Map</span>--}}
-{{--                        <span class="pull-right-container">--}}
-{{--              <i class="fa fa-caret-down pull-right"></i>--}}
-{{--            </span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="treeview-menu">--}}
-{{--                        <li><a href="pages/map-google.html"><i class="fa fa-circle-thin"></i>Google Map</a></li>--}}
-{{--                        <li><a href="pages/map-vector.html"><i class="fa fa-circle-thin"></i>Vector Map</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+                @can('crud-customers')
+                <li class="treeview">
+                    <a href="#">
+                        <i class="ti-map-alt"></i> <span>Customers</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-caret-down pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('customers.index') }}"><i class="fa fa-circle-thin"></i>Customers List</a></li>
+                        <li><a href="pages/map-vector.html"><i class="fa fa-circle-thin"></i>Vector Map</a></li>
+                    </ul>
+                </li>
+                @endcan
 {{--                <li class="treeview">--}}
 {{--                    <a href="#">--}}
 {{--                        <i class="ti-plug"></i> <span>Extension</span>--}}
