@@ -36,4 +36,21 @@ class BookService
     {
         return $this->bookRepo->findById($id);
     }
+    public function update($request,$book)
+    {
+        $book->name = $request->name;
+        $book->category_id = $request->category_id;
+        $file = $request->file('avatar');
+        if ($file) {
+            $path = $file->store('images', 'public');
+            $book->avatar = $path;
+
+        }        $book->status = $request->status;
+        $book->desc = $request->desc;
+        $this->bookRepo->save($book);
+    }
+    public function delete($book)
+    {
+        $this->bookRepo->delete($book);
+    }
 }
