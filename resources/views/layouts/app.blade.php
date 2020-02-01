@@ -263,17 +263,18 @@
                     </ul>
                 </li>
                 @endcan
-{{--                <li class="treeview">--}}
-{{--                    <a href="#">--}}
-{{--                        <i class="ti-plug"></i> <span>Extension</span>--}}
-{{--                        <span class="pull-right-container">--}}
-{{--              <i class="fa fa-caret-down pull-right"></i>--}}
-{{--            </span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="treeview-menu">--}}
-{{--                        <li><a href="pages/extension-fullscreen.html"><i class="fa fa-circle-thin"></i>Fullscreen</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+                <li class="treeview">
+                    <a href="#">
+                        <i class="ti-plug"></i> <span>Borrows</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-caret-down pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('borrows.index') }}"><i class="fa fa-circle-thin"></i>List borrows</a></li>
+                        <li><a href="{{ route('borrows.create') }}"><i class="fa fa-circle-thin"></i>Add borrows</a></li>
+                    </ul>
+                </li>
 
 {{--                <li class="treeview">--}}
 {{--                    <a href="#">--}}
