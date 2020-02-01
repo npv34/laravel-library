@@ -39,5 +39,35 @@ class CustomerController extends Controller
         Session::flash('success', 'Thêm thành công');
         return redirect()->route('customers.index');
     }
+    public function edit($id)
+    {
+        if (!Gate::allows('crud-customers')) {
+            abort(403);
+        }
+        $customer = $this->customerService->findById($id);
+        return view('manager.customers.edit', compact('customer'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        if (!Gate::allows('crud-customers')) {
+            abort(403);
+        }
+        $customer = $this->customerService->findById($id);
+        $this->customerService->update($request, $customer);
+        Session::flash('success', 'Cập nhật thành công');
+        return redirect()->route('customers.index');
+    }
+
+    public function destroy($id)
+    {
+        if (!Gate::allows('crud-customers')) {
+            abort(403);
+        }
+        $customer = $this->customerService->findById($id);
+        $this->customerService->delete($customer);
+        Session::flash('success', 'Xóa thành công');
+        return redirect()->route('customers.index');
+    }
 
 }

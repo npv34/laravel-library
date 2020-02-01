@@ -31,6 +31,7 @@
                                 <thead>
                                 <tr>
                                     <th>STT</th>
+                                    <th>Name</th>
                                     <th>CodeID</th>
                                     <th>Class</th>
                                     <th>Date of birds</th>
@@ -42,15 +43,16 @@
 
                                     <tr>
                                         <td>{{++$key}}</td>
+                                        <td>{{$customer->name}}</td>
                                         <td>{{$customer->codeID}}</td>
                                         <td>{{$customer->class}}</td>
                                         <td>{{$customer->dob}}</td>
-                                        <td><a href="" class="btn btn-success">Edit</a></td>
-                                        <td><a href="" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
+                                        <td><a href="{{ route('customers.edit',$customer->id) }}" class="btn btn-success">Edit</a></td>
+                                        <td><a href="{{ route('customers.destroy',$customer->id) }}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="5" class="text-center">No data</td>
+                                        <td colspan="7" class="text-center">No data</td>
                                     </tr>
                                 @endforelse
 
