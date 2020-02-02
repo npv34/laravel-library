@@ -99,6 +99,12 @@ class AppServiceProvider extends ServiceProvider
             }
             return false;
         });
+        Gate::define('crud-borrows',function ($borrow) {
+            if ($borrow->role == RoleConstant::MANAGEMENT) {
+                return true;
+            }
+            return false;
+        });
 
     }
 }

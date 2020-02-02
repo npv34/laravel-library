@@ -263,6 +263,7 @@
                     </ul>
                 </li>
                 @endcan
+                @can('crud-borrows')
                 <li class="treeview">
                     <a href="#">
                         <i class="ti-plug"></i> <span>Borrows</span>
@@ -275,6 +276,7 @@
                         <li><a href="{{ route('borrows.create') }}"><i class="fa fa-circle-thin"></i>Add borrows</a></li>
                     </ul>
                 </li>
+                @endcan
 
 {{--                <li class="treeview">--}}
 {{--                    <a href="#">--}}
