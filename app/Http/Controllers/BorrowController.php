@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use App\Services\BookService;
 use App\Services\CustomerService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 
 class BorrowController extends Controller
 {
@@ -27,5 +30,9 @@ class BorrowController extends Controller
         $customers = $this->customerService->getAll();
         $books = $this->bookService->getAll();
         return view('manager.borrows.add', compact('customers','books'));
+    }
+    public function searchCustomer(Request $request)
+    {
+        return Customer::where('name', 'LIKE', '%'. $request->keyword . '%')->get();
     }
 }
