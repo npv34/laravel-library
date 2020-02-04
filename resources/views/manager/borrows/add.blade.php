@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <meta name="_token" content="{{ csrf_token() }}">
     <section class="content-header">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
@@ -66,7 +67,8 @@
                                                             <div class="form-group">
                                                                 <h5>Mã số<span class="text-danger">*</span></h5>
                                                                 <div class="controls">
-                                                                    <input type="text" name="codeID" class="form-control"
+                                                                    <input type="text" name="codeID"
+                                                                           class="form-control"
                                                                            data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -91,7 +93,8 @@
                                                         </div>
                                                         <div class="col-12 col-md-12">
                                                             <h5>Ngày trả (dự kiến)</h5>
-                                                            <input  class="form-control" name="day_expected_return" type="date" value="2011-08-19">
+                                                            <input class="form-control" name="day_expected_return"
+                                                                   type="date" value="2011-08-19">
                                                         </div>
                                                     </div>
 
@@ -118,20 +121,21 @@
                                                             <input aria-controls="filterCustomer"
                                                                    class="form-control form-control-sm"
                                                                    placeholder="Nhập tên hoặc mã để tìm"
-                                                                   type="search" width="100%"></div>
+                                                                   type="text" id="search-customer" name="search" width="100%">
+                                                        </div>
                                                         <div class="col-12 cusomers-list">
                                                             <div class="box-body">
                                                                 <div class="table-responsive">
                                                                     <table class="table table-hover mb-0">
-                                                                        <tbody>
+                                                                        <thead>
                                                                         <tr>
                                                                             <th scope="col">#</th>
                                                                             <th scope="col">Name</th>
                                                                             <th scope="col">Address</th>
                                                                             <th></th>
                                                                         </tr>
-                                                                        </tbody>
-                                                                        <tbody>
+                                                                        </thead>
+                                                                        <tbody id="customer-table">
                                                                         @forelse($customers as $key => $customer)
                                                                             <tr>
                                                                                 <th scope="row">{{ $key++ }}</th>
@@ -213,7 +217,8 @@
                                                                                 <tr>
                                                                                     <th scope="row">{{ $key++ }}</th>
                                                                                     <td>{{ $book->name }}</td>
-                                                                                    <td>@if($book->status == 1) Mới @else Cũ @endif</td>
+                                                                                    <td>@if($book->status == 1)
+                                                                                            Mới @else Cũ @endif</td>
                                                                                     <td>
                                                                                         <button class="btn btn-primary">
                                                                                             Chọn
