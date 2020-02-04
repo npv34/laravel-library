@@ -17,6 +17,7 @@ class BookTableSeeder extends Seeder
         $book->avatar = 'avar.png';
         $book->status = 1;
         $book->desc = 'Bí kíp làm nhân viên bình thường';
+        $book->borrow = 1;
         $book->save();
 
         $book = new \App\Book();
@@ -25,6 +26,7 @@ class BookTableSeeder extends Seeder
         $book->avatar = 'avar.png';
         $book->status = 0;
         $book->desc = 'Hạt giống tâm hồn';
+        $book->borrow = 0;
         $book->save();
     }
 }

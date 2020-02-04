@@ -138,7 +138,7 @@
                                                                         <tbody id="customer-table">
                                                                         @forelse($customers as $key => $customer)
                                                                             <tr>
-                                                                                <th scope="row">{{ $key++ }}</th>
+                                                                                <th scope="row">{{ ++$key }}</th>
                                                                                 <td>{{ $customer->name }}</td>
                                                                                 <td>{{ $customer->class }}</td>
                                                                                 <td>
@@ -199,23 +199,23 @@
                                                                 <input aria-controls="filterCustomer"
                                                                        class="form-control form-control-sm"
                                                                        placeholder="Nhập tên hoặc mã để tìm"
-                                                                       type="search" width="100%"></div>
+                                                                       type="text" id="search-book" name="search" width="100%"></div>
                                                             <div class="col-12 cusomers-list">
                                                                 <div class="box-body">
                                                                     <div class="table-responsive">
                                                                         <table class="table table-hover mb-0">
-                                                                            <tbody>
+                                                                            <thead>
                                                                             <tr>
                                                                                 <th scope="col">#</th>
                                                                                 <th scope="col">Name</th>
                                                                                 <th scope="col">Status</th>
                                                                                 <th></th>
                                                                             </tr>
-                                                                            </tbody>
-                                                                            <tbody>
+                                                                            </thead>
+                                                                            <tbody id="book-table">
                                                                             @forelse($books as $key => $book)
                                                                                 <tr>
-                                                                                    <th scope="row">{{ $key++ }}</th>
+                                                                                    <th scope="row">{{ ++$key }}</th>
                                                                                     <td>{{ $book->name }}</td>
                                                                                     <td>@if($book->status == 1)
                                                                                             Mới @else Cũ @endif</td>

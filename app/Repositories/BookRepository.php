@@ -20,6 +20,11 @@ class BookRepository extends BaseRepository
         return $this->book->all();
     }
 
+    public function getBookNotBorrow()
+    {
+        return $this->book->where('borrow','0')->get();
+    }
+
     public function findById($id)
     {
         return $this->book->findOrFail($id);

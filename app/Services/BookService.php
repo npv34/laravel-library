@@ -18,6 +18,10 @@ class BookService
     {
         return $this->bookRepo->getAll();
     }
+    public function getBookNotBorrow()
+    {
+        return $this->bookRepo->getBookNotBorrow();
+    }
     public function create($request)
     {
         $book = new Book();
