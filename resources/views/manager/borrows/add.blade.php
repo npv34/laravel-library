@@ -184,7 +184,7 @@
                                                 <div class="modal-dialog" style="width: 50%">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title">Tìm khách hàng</h5>
+                                                            <h5 class="modal-title">Tìm sách</h5>
                                                             <button type="button" class="close"
                                                                     data-dismiss="modal">
                                                                 <span aria-hidden="true">&times;</span>
