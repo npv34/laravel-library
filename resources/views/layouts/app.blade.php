@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="{{ asset('css/css/skins/_all-skins.css') }}">
 
     <!-- weather weather -->
-    <link rel="stylesheet" href="{{ asset('assets/vendor_components/weather-icons/weather-icons.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('assets/vendor_components/weather-icons/weather-icons.css') }}">--}}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -145,41 +145,6 @@
                     </ul>
                 </li>
                 @endcan
-
-{{--                <li class="treeview">--}}
-{{--                    <a href="#">--}}
-{{--                        <i class="ti-layout-accordion-separated"></i> <span>Multilevel</span>--}}
-{{--                        <span class="pull-right-container">--}}
-{{--              <i class="fa fa-caret-down pull-right"></i>--}}
-{{--            </span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="treeview-menu">--}}
-{{--                        <li><a href="#">Level One</a></li>--}}
-{{--                        <li class="treeview">--}}
-{{--                            <a href="#">Level One--}}
-{{--                                <span class="pull-right-container">--}}
-{{--              <i class="fa fa-caret-down pull-right"></i>--}}
-{{--            </span>--}}
-{{--                            </a>--}}
-{{--                            <ul class="treeview-menu">--}}
-{{--                                <li><a href="#">Level Two</a></li>--}}
-{{--                                <li class="treeview">--}}
-{{--                                    <a href="#">Level Two--}}
-{{--                                        <span class="pull-right-container">--}}
-{{--              <i class="fa fa-caret-down pull-right"></i>--}}
-{{--            </span>--}}
-{{--                                    </a>--}}
-{{--                                    <ul class="treeview-menu">--}}
-{{--                                        <li><a href="#">Level Three</a></li>--}}
-{{--                                        <li><a href="#">Level Three</a></li>--}}
-{{--                                    </ul>--}}
-{{--                                </li>--}}
-{{--                            </ul>--}}
-{{--                        </li>--}}
-{{--                        <li><a href="#">Level One</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-
             </ul>
         </section>
     </aside>
@@ -386,7 +351,7 @@
     <script src="{{asset('assets/vendor_components/jquery-ui/jquery-ui.js')}}"></script>
 
     <!-- popper -->
-    <script src="{{asset('assets/vendor_components/popper/dist/popper.min.js')}}"></script>
+{{--    <script src="{{asset('assets/vendor_components/popper/dist/popper.min.js')}}"></script>--}}
 
     <!-- Bootstrap 4.0-->
     <script src="{{ asset('assets/vendor_components/bootstrap/dist/js/bootstrap.js') }}"></script>
@@ -401,18 +366,18 @@
     <script src="{{asset('assets/vendor_components/jquery.peity/jquery.peity.js')}}"></script>
 
     <!-- Sparkline -->
-    <script src="{{asset('assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
+{{--    <script src="{{asset('assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>--}}
 
     <!-- ChartJS -->
-    <script src="{{ asset('assets/vendor_components/chart.js-master/Chart.bundle.js') }}"></script>
-    <script src="{{ asset('assets/vendor_components/chart.js-master/utils.js') }}"></script>
+{{--    <script src="{{ asset('assets/vendor_components/chart.js-master/Chart.bundle.js') }}"></script>--}}
+{{--    <script src="{{ asset('assets/vendor_components/chart.js-master/utils.js') }}"></script>--}}
 
     <!-- apexcharts -->
-    <script src="{{ asset('assets/vendor_components/apexcharts-bundle/irregular-data-series.js') }}"></script>
-    <script src="{{ asset('assets/vendor_components/apexcharts-bundle/dist/apexcharts.js') }}"></script>
+{{--    <script src="{{ asset('assets/vendor_components/apexcharts-bundle/irregular-data-series.js') }}"></script>--}}
+{{--    <script src="{{ asset('assets/vendor_components/apexcharts-bundle/dist/apexcharts.js') }}"></script>--}}
 
-    <!-- weather for demo purposes -->
-    <script src="{{ asset('assets/vendor_plugins/weather-icons/WeatherIcon.js') }}"></script>
+{{--    <!-- weather for demo purposes -->--}}
+{{--    <script src="{{ asset('assets/vendor_plugins/weather-icons/WeatherIcon.js') }}"></script>--}}
 
     <!-- Bankio admin App -->
     <script src="{{ asset('js/js/template.js') }}"></script>
