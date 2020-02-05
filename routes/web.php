@@ -74,5 +74,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/', 'BorrowController@index')->name('borrows.index');
         Route::get('/create', 'BorrowController@create')->name('borrows.create');
         Route::get('/searchCustomer', 'BorrowController@searchCustomer');
+        Route::get('/searchBook', 'BorrowController@searchBook');
     });
 });
