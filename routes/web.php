@@ -50,6 +50,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/edit', 'BookController@edit')->name('books.edit');
         Route::get('/{id}/update', 'BookController@update')->name('books.update');
         Route::get('/{id}/delete', 'BookController@destroy')->name('books.destroy');
+        Route::get('/{id}/', 'BookController@getBook')->name('customers.showBook');
+
     });
 
     Route::prefix('categories')->group(function () {
@@ -68,6 +70,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/edit', 'CustomerController@edit')->name('customers.edit');
         Route::post('/{id}/update', 'CustomerController@update')->name('customers.update');
         Route::get('/{id}/delete', 'CustomerController@destroy')->name('customers.destroy');
+        Route::get('/{id}', 'CustomerController@showCustomer')->name('customers.showCustomer');
     });
 
     Route::prefix('borrows')->group(function () {

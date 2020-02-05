@@ -70,4 +70,11 @@ class CustomerController extends Controller
         return redirect()->route('customers.index');
     }
 
+    public function showCustomer($id)
+    {
+        return $this->customerService->findById($id);
+    }
+
+
+
 }

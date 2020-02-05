@@ -58,7 +58,7 @@
                                                             <div class="form-group">
                                                                 <h5>Họ và tên <span class="text-danger">*</span></h5>
                                                                 <div class="controls">
-                                                                    <input type="text" name="name" class="form-control"
+                                                                    <input type="text" id="name-customer" disabled name="name" class="form-control"
                                                                            data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -67,7 +67,7 @@
                                                             <div class="form-group">
                                                                 <h5>Mã số<span class="text-danger">*</span></h5>
                                                                 <div class="controls">
-                                                                    <input type="text" name="codeID"
+                                                                    <input type="text" id="code-customer" disabled name="codeID"
                                                                            class="form-control"
                                                                            data-validation-required-message="This field is required">
                                                                 </div>
@@ -77,7 +77,7 @@
                                                             <div class="form-group">
                                                                 <h5>Trường <span class="text-danger">*</span></h5>
                                                                 <div class="controls">
-                                                                    <input type="text" name="class" class="form-control"
+                                                                    <input type="text" id="class-customer" disabled name="class" class="form-control"
                                                                            data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -86,7 +86,7 @@
                                                             <div class="form-group">
                                                                 <h5>Ngày sinh<span class="text-danger">*</span></h5>
                                                                 <div class="controls">
-                                                                    <input type="date" name="dob" class="form-control"
+                                                                    <input type="date" id="dob-customer"disabled name="dob" class="form-control"
                                                                            data-validation-required-message="This field is required">
                                                                 </div>
                                                             </div>
@@ -94,14 +94,12 @@
                                                         <div class="col-12 col-md-12">
                                                             <h5>Ngày trả (dự kiến)</h5>
                                                             <input class="form-control" name="day_expected_return"
-                                                                   type="date" value="2011-08-19">
+                                                                   type="date" value="2011-05-08">
                                                         </div>
                                                     </div>
-
+                                                    <button class="btn btn-primary col-3 mt-10" type="submit">Cho mượn </button>
                                                 </form>
                                             </div>
-
-
                                         </div>
 
 
@@ -142,7 +140,7 @@
                                                                                 <td>{{ $customer->name }}</td>
                                                                                 <td>{{ $customer->class }}</td>
                                                                                 <td>
-                                                                                    <button class="btn btn-primary">
+                                                                                    <button data-id="{{$customer->id}}" class="btn btn-primary select-customer" >
                                                                                         Chọn
                                                                                     </button>
                                                                                 </td>
@@ -184,6 +182,24 @@
                                                     Thêm sách
                                                 </button>
                                             </div>
+                                            <div class="col-12 col-md-12 pt-2">
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover mb-0">
+                                                        <thead class="thead-light">
+                                                        <tr>
+                                                            <th scope="col">Họ tên</th>
+                                                            <th scope="col">Trạng thái</th>
+                                                            <th></th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody id="book-table-choose">
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+
                                             <div class="modal modal-right fade" id="modal-book" tabindex="-1">
                                                 <div class="modal-dialog" style="width: 50%">
                                                     <div class="modal-content">
@@ -220,7 +236,7 @@
                                                                                     <td>@if($book->status == 1)
                                                                                             Mới @else Cũ @endif</td>
                                                                                     <td>
-                                                                                        <button class="btn btn-primary">
+                                                                                        <button data-id="{{$book->id}}" class="btn btn-primary select-book">
                                                                                             Chọn
                                                                                         </button>
                                                                                     </td>

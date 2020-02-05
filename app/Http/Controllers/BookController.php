@@ -76,4 +76,9 @@ class BookController extends Controller
         Session::flash('success', 'Xóa thành công');
         return redirect()->route('books.index');
     }
+
+    public function getBook($id)
+    {
+        return $this->bookService->findById($id);
+    }
 }
