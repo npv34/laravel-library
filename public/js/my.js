@@ -1,9 +1,11 @@
 $(document).ready(function () {
+
+    let url = window.location.href;
     $('#search-customer').on('keyup', function () {
         let value = $(this).val();
         console.log(value);
         $.ajax({
-            url: 'http://localhost:8000/admin/borrows/searchCustomer',
+            url: url + '/admin/borrows/searchCustomer',
             type: 'GET',
             data: {'keyword': value},
             success: function (data) {
@@ -30,7 +32,7 @@ $(document).ready(function () {
         let value = $(this).val();
         console.log(value);
         $.ajax({
-            url: 'http://localhost:8000/admin/borrows/searchBook',
+            url: url + '/admin/borrows/searchBook',
             type: 'GET',
             data: {'keyword': value},
             success: function (data) {
@@ -61,7 +63,7 @@ $(document).ready(function () {
     $('.select-customer').click(function () {
         let idCustomer = $(this).attr("data-id");
         $.ajax({
-            url: 'http://localhost:8000/admin/customers/' + idCustomer,
+            url: url + '/admin/customers/' + idCustomer,
             type: 'GET',
             success: function (result) {
                 //dong model lai
@@ -80,7 +82,7 @@ $(document).ready(function () {
     $('body').on('click', '.select-book', function () {
         let idBook = $(this).attr("data-id");
         $.ajax({
-            url: 'http://localhost:8000/admin/books/' + idBook,
+            url: url + '/admin/books/' + idBook,
             type: 'GET',
             success: function (result) {
                 let status = (result['status'] === 1) ? 'Mới' : 'Cũ';
@@ -123,7 +125,7 @@ $(document).ready(function () {
             }
         });//lay ngay muon hien tai
          $.ajax({
-            url: 'http://localhost:8000/admin/borrows/create',
+            url: url + '/admin/borrows/create',
             type: 'POST',
             data: data ,
             dataType: 'json',
