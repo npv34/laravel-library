@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -76,6 +77,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::prefix('borrows')->group(function () {
         Route::get('/', 'BorrowController@index')->name('borrows.index');
         Route::get('/create', 'BorrowController@create')->name('borrows.create');
+        Route::post('/create', 'BorrowController@store')->name('borrows.store');
         Route::get('/searchCustomer', 'BorrowController@searchCustomer');
         Route::get('/searchBook', 'BorrowController@searchBook');
     });

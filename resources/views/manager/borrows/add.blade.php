@@ -52,10 +52,10 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-12 col-md-12">
-                                                <form action="" method="post">
                                                     <div class="row" style="padding-top: 20px">
                                                         <div class="col-12 col-md-6">
                                                             <div class="form-group">
+                                                                <p id="customer-id"></p>
                                                                 <h5>Họ và tên <span class="text-danger">*</span></h5>
                                                                 <div class="controls">
                                                                     <input type="text" id="name-customer" disabled name="name" class="form-control"
@@ -93,12 +93,11 @@
                                                         </div>
                                                         <div class="col-12 col-md-12">
                                                             <h5>Ngày trả (dự kiến)</h5>
-                                                            <input class="form-control" name="day_expected_return"
+                                                            <input class="form-control " id="date-re" name="day_expected_return"
                                                                    type="date" value="2011-05-08">
                                                         </div>
                                                     </div>
-                                                    <button class="btn btn-primary col-3 mt-10" type="submit">Cho mượn </button>
-                                                </form>
+                                                    <button class="btn btn-primary col-3 mt-10 submit-br" type="submit">Cho mượn </button>
                                             </div>
                                         </div>
 
