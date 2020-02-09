@@ -20,7 +20,7 @@ class CreateBorrowsTable extends Migration
             $table->unsignedBigInteger('book_id');
             $table->foreign('book_id')->references('id')->on('books');
             $table->date('day_borrow');
-            $table->date('day_return');
+            $table->date('day_return')->nullable();
             $table->timestamps();
         });
     }

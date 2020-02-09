@@ -63,7 +63,7 @@
                 @can('crud-users')
                 <li class="treeview {{ (request()->is('admin/users*')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="ti-layout-cta-btn-left"></i> <span>Users</span>
+                        <i class="fa fa-user-o"></i> <span>Users</span>
                         <span class="pull-right-container">
                         <i class="fa fa-caret-down pull-right"></i>
                         </span>
@@ -78,7 +78,7 @@
                 @can('crud-libraries')
                 <li class="treeview {{ (request()->is('admin/libraries*')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="ti-layout-cta-btn-left"></i> <span>Libraries</span>
+                        <i class="fa fa-bank"></i> <span>Libraries</span>
                         <span class="pull-right-container">
                         <i class="fa fa-caret-down pull-right"></i>
                         </span>
@@ -92,7 +92,7 @@
 
                 @can('crud-categories')
                 <li class="treeview {{ (request()->is('admin/categories*')) ? 'active' : '' }}">
-                    <a href="#"><i class="ti-signal"></i> <span>Categories</span>
+                    <a href="#"><i class="fa fa-bookmark"></i> <span>Categories</span>
                         <span class="pull-right-container">
 			             <i class="fa fa-caret-down pull-right"></i>
 			            </span>
@@ -106,7 +106,7 @@
 
                 @can('crud-books')
                 <li class="treeview">
-                    <a href="#"><i class="ti-alert"></i> <span>Books</span>
+                    <a href="#"><i class="fa fa-book"></i> <span>Books</span>
                         <span class="pull-right-container">
 			  <i class="fa fa-caret-down pull-right"></i>
 			</span>
@@ -120,7 +120,7 @@
                 @can('crud-customers')
                 <li class="treeview">
                     <a href="#">
-                        <i class="ti-map-alt"></i> <span>Customers</span>
+                        <i class="fa  fa-user-circle-o"></i> <span>Customers</span>
                         <span class="pull-right-container">
               <i class="fa fa-caret-down pull-right"></i>
             </span>
@@ -134,7 +134,7 @@
                 @can('crud-borrows')
                 <li class="treeview">
                     <a href="#">
-                        <i class="ti-plug"></i> <span>Borrows</span>
+                        <i class="fa fa-address-book-o"></i> <span>Borrows</span>
                         <span class="pull-right-container">
               <i class="fa fa-caret-down pull-right"></i>
             </span>
