@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use App\Borrow;
 use App\Customer;
 use App\Services\BookService;
 use App\Services\CustomerService;
+use Illuminate\Database\Events\TransactionBeginning;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\DB;
 
 class BorrowController extends Controller
 {
@@ -34,7 +38,25 @@ class BorrowController extends Controller
 
     public function store(Request $request)
     {
-        return $request->get('book_id');
+        define('BORROWED', 1);
+        DB::beginTransaction();
+        try {
+            $book = $this->bookService->findById($request->book_id);
+            $book->borrow = BORROWED;
+            $book->save();
+
+            $borrow = new Borrow();
+            $borrow->book_id = $request->book_id;
+            $borrow->customer_id = $request->customer_id;
+            $borrow->day_expected_return = $request->day_expected_return;
+            $borrow->day_borrow = \date('Y-d-m');
+            $borrow->save();
+            DB::commit();
+        } catch (\Exception $exception) {
+            DB::rollBack();
+            return response()->json(['error' => 'Co loi xay ra! Vui long thuc hien lai sau']);
+        }
+        return response()->json(['success' => 'Cho muon thanh cong']);
 
     }
 

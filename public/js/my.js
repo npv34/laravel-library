@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let url = window.location.href;
+    let url = window.location.origin;
     $('#search-customer').on('keyup', function () {
         let value = $(this).val();
         console.log(value);
@@ -113,11 +113,6 @@ $(document).ready(function () {
 
         //lay ngay tra du kien
         let day_expected_return = $('#date-re').val();
-         //tao request form data
-        let data = new FormData();
-        data.append('book_id', idBook);
-        data.append('customer_id', idCustomer);
-        data.append('day_expected_return', day_expected_return);
 
         $.ajaxSetup({
             headers: {
@@ -125,13 +120,19 @@ $(document).ready(function () {
             }
         });//lay ngay muon hien tai
          $.ajax({
-            url: url + '/admin/borrows/create',
+            url: url + '/admin/borrows/store',
             type: 'POST',
-            data: data ,
+            data: {book_id: idBook, customer_id : idCustomer, day_expected_return : day_expected_return} ,
             dataType: 'json',
-            processData: false,
             success: function (result) {
-                  console.log(result);
+                if (result.error) {
+                    alert(result.error);
+                }
+
+                if (result.success) {
+                    alert(result.success);
+                    location.reload()
+                }
             },
             error: function (errors) {
                   console.log(errors)
