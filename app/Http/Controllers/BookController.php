@@ -14,6 +14,7 @@ class BookController extends Controller
 {
     protected $bookService;
     protected $categoryService;
+
     public function __construct(BookService $bookService, CategoryService $categoryService)
     {
         $this->bookService = $bookService;
@@ -26,16 +27,18 @@ class BookController extends Controller
             abort(403);
         }
         $books = Book::all();
-        return view('manager.books.list',compact('books'));
+        return view('manager.books.list', compact('books'));
     }
+
     public function create()
     {
         if (!Gate::allows('crud-books')) {
             abort(403);
         }
         $categories = $this->categoryService->getAll();
-        return view('manager.books.create',compact('categories'));
+        return view('manager.books.create', compact('categories'));
     }
+
     public function store(CreateBookRequest $request)
     {
         if (!Gate::allows('crud-books')) {
@@ -45,6 +48,7 @@ class BookController extends Controller
         Session::flash('success', 'Thêm thành công');
         return redirect()->route('books.index');
     }
+
     public function edit($id)
     {
         if (!Gate::allows('crud-books')) {
@@ -53,8 +57,9 @@ class BookController extends Controller
         $book = $this->bookService->findById($id);
         $categories = $this->categoryService->getAll();
 
-        return view('manager.books.edit',compact('book','categories'));
+        return view('manager.books.edit', compact('book', 'categories'));
     }
+
     public function update(Request $request, $id)
     {
         if (!Gate::allows('crud-books')) {

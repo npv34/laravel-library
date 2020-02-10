@@ -11,13 +11,13 @@
     <!-- Scripts -->
 {{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
 
-    <!-- Fonts -->
+<!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
 {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
-    <!-- Bootstrap 4.0-->
+<!-- Bootstrap 4.0-->
     <link rel="stylesheet" href="{{ asset('assets/vendor_components/bootstrap/dist/css/bootstrap.css') }}">
 
     <!-- Bootstrap extend-->
@@ -32,7 +32,7 @@
     <!-- weather weather -->
 {{--    <link rel="stylesheet" href="{{ asset('assets/vendor_components/weather-icons/weather-icons.css') }}">--}}
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -45,8 +45,8 @@
 <body class="hold-transition skin-black sidebar-mini">
 <div class="wrapper">
 
-    @include('layouts.cores.header')
-    <!-- Left side column. contains the logo and sidebar -->
+@include('layouts.cores.header')
+<!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
         <!-- sidebar-->
         <section class="sidebar">
@@ -61,89 +61,96 @@
                     </a>
                 </li>
                 @can('crud-users')
-                <li class="treeview {{ (request()->is('admin/users*')) ? 'active' : '' }}">
-                    <a href="#">
-                        <i class="fa fa-user-o"></i> <span>Users</span>
-                        <span class="pull-right-container">
+                    <li class="treeview {{ (request()->is('admin/users*')) ? 'active' : '' }}">
+                        <a href="#">
+                            <i class="fa fa-user-o"></i> <span>Users</span>
+                            <span class="pull-right-container">
                         <i class="fa fa-caret-down pull-right"></i>
                         </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('users.index')}}"><i class="fa fa-circle-thin"></i>Users list</a></li>
-                        <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-thin"></i>Add user</a></li>
-                    </ul>
-                </li>
-               @endcan
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{route('users.index')}}"><i class="fa fa-circle-thin"></i>Users list</a></li>
+                            <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-thin"></i>Add user</a></li>
+                        </ul>
+                    </li>
+                @endcan
 
                 @can('crud-libraries')
-                <li class="treeview {{ (request()->is('admin/libraries*')) ? 'active' : '' }}">
-                    <a href="#">
-                        <i class="fa fa-bank"></i> <span>Libraries</span>
-                        <span class="pull-right-container">
+                    <li class="treeview {{ (request()->is('admin/libraries*')) ? 'active' : '' }}">
+                        <a href="#">
+                            <i class="fa fa-bank"></i> <span>Libraries</span>
+                            <span class="pull-right-container">
                         <i class="fa fa-caret-down pull-right"></i>
                         </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('libraries.index')}}"><i class="fa fa-circle-thin"></i>Libraries list</a></li>
-                        <li><a href="{{ route('libraries.create') }}"><i class="fa fa-circle-thin"></i>Add libraries</a></li>
-                    </ul>
-                </li>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{route('libraries.index')}}"><i class="fa fa-circle-thin"></i>Libraries
+                                    list</a></li>
+                            <li><a href="{{ route('libraries.create') }}"><i class="fa fa-circle-thin"></i>Add libraries</a>
+                            </li>
+                        </ul>
+                    </li>
                 @endcan
 
                 @can('crud-categories')
-                <li class="treeview {{ (request()->is('admin/categories*')) ? 'active' : '' }}">
-                    <a href="#"><i class="fa fa-bookmark"></i> <span>Categories</span>
-                        <span class="pull-right-container">
+                    <li class="treeview {{ (request()->is('admin/categories*')) ? 'active' : '' }}">
+                        <a href="#"><i class="fa fa-bookmark"></i> <span>Categories</span>
+                            <span class="pull-right-container">
 			             <i class="fa fa-caret-down pull-right"></i>
 			            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('categories.index')}}"><i class="fa fa-circle"></i>Categories list</a></li>
-                        <li><a href="{{ route('categories.create') }}"><i class="fa fa-circle"></i>Add Categories</a></li>
-                    </ul>
-                </li>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{route('categories.index')}}"><i class="fa fa-circle"></i>Categories list</a>
+                            </li>
+                            <li><a href="{{ route('categories.create') }}"><i class="fa fa-circle"></i>Add
+                                    Categories</a></li>
+                        </ul>
+                    </li>
                 @endcan
 
                 @can('crud-books')
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-book"></i> <span>Books</span>
-                        <span class="pull-right-container">
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-book"></i> <span>Books</span>
+                            <span class="pull-right-container">
 			  <i class="fa fa-caret-down pull-right"></i>
 			</span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ route('books.index') }}"><i class="fa fa-circle"></i>Books list</a></li>
-                        <li><a href="pages/error-500.html"><i class="fa fa-circle"></i>500</a></li>
-                    </ul>
-                </li>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ route('books.index') }}"><i class="fa fa-circle"></i>Books list</a></li>
+                            <li><a href="pages/error-500.html"><i class="fa fa-circle"></i>500</a></li>
+                        </ul>
+                    </li>
                 @endcan
                 @can('crud-customers')
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa  fa-user-circle-o"></i> <span>Customers</span>
-                        <span class="pull-right-container">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa  fa-user-circle-o"></i> <span>Customers</span>
+                            <span class="pull-right-container">
               <i class="fa fa-caret-down pull-right"></i>
             </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ route('customers.index') }}"><i class="fa fa-circle-thin"></i>Customers List</a></li>
-                        <li><a href="pages/map-vector.html"><i class="fa fa-circle-thin"></i>Vector Map</a></li>
-                    </ul>
-                </li>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ route('customers.index') }}"><i class="fa fa-circle-thin"></i>Customers List</a>
+                            </li>
+                            <li><a href="pages/map-vector.html"><i class="fa fa-circle-thin"></i>Vector Map</a></li>
+                        </ul>
+                    </li>
                 @endcan
-                @can('crud-borrows')
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-address-book-o"></i> <span>Borrows</span>
-                        <span class="pull-right-container">
+                @can('manage-borrows')
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-address-book-o"></i> <span>Borrows</span>
+                            <span class="pull-right-container">
               <i class="fa fa-caret-down pull-right"></i>
             </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ route('borrows.index') }}"><i class="fa fa-circle-thin"></i>List borrows</a></li>
-                        <li><a href="{{ route('borrows.create') }}"><i class="fa fa-circle-thin"></i>Add borrows</a></li>
-                    </ul>
-                </li>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ route('borrows.index') }}"><i class="fa fa-circle-thin"></i>List borrows</a>
+                            </li>
+                            <li><a href="{{ route('borrows.create') }}"><i class="fa fa-circle-thin"></i>Add borrows</a>
+                            </li>
+                        </ul>
+                    </li>
                 @endcan
             </ul>
         </section>
@@ -153,17 +160,19 @@
     <div class="content-wrapper">
 
         <!-- Main content -->
-        @yield('content')
-        <!-- /.content -->
+    @yield('content')
+    <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    @include('layouts.cores.footer')
-    <!-- Control Sidebar -->
+@include('layouts.cores.footer')
+<!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-light">
         <!-- Create the tabs -->
         <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab" class="active"><i class="fa fa-home"></i></a></li>
-            <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-cog fa-spin"></i></a></li>
+            <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab" class="active"><i
+                        class="fa fa-home"></i></a></li>
+            <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
+                        class="fa fa-cog fa-spin"></i></a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
@@ -282,7 +291,7 @@
                     <h3 class="control-sidebar-heading">General Settings</h3>
 
                     <div class="form-group">
-                        <input type="checkbox" id="report_panel" class="chk-col-grey" >
+                        <input type="checkbox" id="report_panel" class="chk-col-grey">
                         <label for="report_panel" class="control-sidebar-subheading ">Report panel usage</label>
 
                         <p>
@@ -292,7 +301,7 @@
                     <!-- /.form-group -->
 
                     <div class="form-group">
-                        <input type="checkbox" id="allow_mail" class="chk-col-grey" >
+                        <input type="checkbox" id="allow_mail" class="chk-col-grey">
                         <label for="allow_mail" class="control-sidebar-subheading ">Mail redirect</label>
 
                         <p>
@@ -302,7 +311,7 @@
                     <!-- /.form-group -->
 
                     <div class="form-group">
-                        <input type="checkbox" id="expose_author" class="chk-col-grey" >
+                        <input type="checkbox" id="expose_author" class="chk-col-grey">
                         <label for="expose_author" class="control-sidebar-subheading ">Expose author name</label>
 
                         <p>
@@ -314,14 +323,15 @@
                     <h3 class="control-sidebar-heading">Chat Settings</h3>
 
                     <div class="form-group">
-                        <input type="checkbox" id="show_me_online" class="chk-col-grey" >
+                        <input type="checkbox" id="show_me_online" class="chk-col-grey">
                         <label for="show_me_online" class="control-sidebar-subheading ">Show me as online</label>
                     </div>
                     <!-- /.form-group -->
 
                     <div class="form-group">
-                        <input type="checkbox" id="off_notifications" class="chk-col-grey" >
-                        <label for="off_notifications" class="control-sidebar-subheading ">Turn off notifications</label>
+                        <input type="checkbox" id="off_notifications" class="chk-col-grey">
+                        <label for="off_notifications" class="control-sidebar-subheading ">Turn off
+                            notifications</label>
                     </div>
                     <!-- /.form-group -->
 
@@ -344,46 +354,46 @@
 
 </div>
 
-    <!-- fullscreen -->
-    <script src="{{ asset('assets/vendor_components/screenfull/screenfull.js') }}"></script>
+<!-- fullscreen -->
+<script src="{{ asset('assets/vendor_components/screenfull/screenfull.js') }}"></script>
 
-    <!-- jQuery ui -->
-    <script src="{{asset('assets/vendor_components/jquery-ui/jquery-ui.js')}}"></script>
+<!-- jQuery ui -->
+<script src="{{asset('assets/vendor_components/jquery-ui/jquery-ui.js')}}"></script>
 
-    <!-- popper -->
+<!-- popper -->
 {{--    <script src="{{asset('assets/vendor_components/popper/dist/popper.min.js')}}"></script>--}}
 
-    <!-- Bootstrap 4.0-->
-    <script src="{{ asset('assets/vendor_components/bootstrap/dist/js/bootstrap.js') }}"></script>
+<!-- Bootstrap 4.0-->
+<script src="{{ asset('assets/vendor_components/bootstrap/dist/js/bootstrap.js') }}"></script>
 
-    <!-- Slimscroll -->
-    <script src="{{ asset('assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
+<!-- Slimscroll -->
+<script src="{{ asset('assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
 
-    <!-- FastClick -->
-    <script src="{{asset('assets/vendor_components/fastclick/lib/fastclick.js')}}"></script>
+<!-- FastClick -->
+<script src="{{asset('assets/vendor_components/fastclick/lib/fastclick.js')}}"></script>
 
-    <!-- peity -->
-    <script src="{{asset('assets/vendor_components/jquery.peity/jquery.peity.js')}}"></script>
+<!-- peity -->
+<script src="{{asset('assets/vendor_components/jquery.peity/jquery.peity.js')}}"></script>
 
-    <!-- Sparkline -->
+<!-- Sparkline -->
 {{--    <script src="{{asset('assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>--}}
 
-    <!-- ChartJS -->
+<!-- ChartJS -->
 {{--    <script src="{{ asset('assets/vendor_components/chart.js-master/Chart.bundle.js') }}"></script>--}}
 {{--    <script src="{{ asset('assets/vendor_components/chart.js-master/utils.js') }}"></script>--}}
 
-    <!-- apexcharts -->
+<!-- apexcharts -->
 {{--    <script src="{{ asset('assets/vendor_components/apexcharts-bundle/irregular-data-series.js') }}"></script>--}}
 {{--    <script src="{{ asset('assets/vendor_components/apexcharts-bundle/dist/apexcharts.js') }}"></script>--}}
 
 {{--    <!-- weather for demo purposes -->--}}
 {{--    <script src="{{ asset('assets/vendor_plugins/weather-icons/WeatherIcon.js') }}"></script>--}}
 
-    <!-- Bankio admin App -->
-    <script src="{{ asset('js/js/template.js') }}"></script>
+<!-- Bankio admin App -->
+<script src="{{ asset('js/js/template.js') }}"></script>
 
-    <!-- Bankio admin dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('js/js/pages/dashboard.js') }}"></script>
+<!-- Bankio admin dashboard demo (This is only for demo purposes) -->
+<script src="{{ asset('js/js/pages/dashboard.js') }}"></script>
 
 
 </body>

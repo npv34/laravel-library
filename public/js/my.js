@@ -119,10 +119,10 @@ $(document).ready(function () {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });//lay ngay muon hien tai
-         $.ajax({
+        $.ajax({
             url: url + '/admin/borrows/store',
             type: 'POST',
-            data: {book_id: idBook, customer_id : idCustomer, day_expected_return : day_expected_return} ,
+            data: {book_id: idBook, customer_id: idCustomer, day_expected_return: day_expected_return},
             dataType: 'json',
             success: function (result) {
                 if (result.error) {
@@ -135,10 +135,10 @@ $(document).ready(function () {
                 }
             },
             error: function (errors) {
-                  console.log(errors)
+                console.log(errors)
             }
 
-         })
+        })
     });
-
 });
+
