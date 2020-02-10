@@ -28,6 +28,7 @@
                                 <thead>
                                 <tr>
                                     <th>STT</th>
+                                    <th>Customer Name</th>
                                     <th>Book Name</th>
                                     <th>Day borrow</th>
                                     <th>Day borrow expected</th>
@@ -39,10 +40,12 @@
 
                                     <tr>
                                         <td>{{++$key}}</td>
+                                        <td>{{$borrow->customer->name}}</td>
                                         <td>{{$borrow->book->name}}</td>
                                         <td>{{$borrow->day_borrow}}</td>
                                         <td>{{$borrow->day_expected_return}}</td>
-                                        <td><a href="" class="btn btn-success">Return book</a></td>
+                                        <td><a href="{{ route('borrows.update',$borrow->id) }}" class="btn btn-success">Return
+                                                book</a></td>
                                     </tr>
                                 @empty
                                     <tr>

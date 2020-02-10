@@ -17,5 +17,14 @@ class BorrowService
     {
         return $this->borrowRepo->getAll();
     }
+    public function findById($id)
+    {
+        return $this->borrowRepo->findById($id);
+    }
+    public function update($borrow)
+    {
+        $borrow->day_return = date('Y-m-d');
+        $this->borrowRepo->save($borrow);
+    }
 
 }

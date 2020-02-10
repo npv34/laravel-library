@@ -15,7 +15,11 @@ class BorrowRepository extends BaseRepository
     }
     public function getAll()
     {
-        return $this->borrow->all();
+        return $this->borrow->where('day_return', null)->get();
+    }
+    public function findById($id)
+    {
+        return $this->borrow->findOrFail($id);
     }
 
 }
