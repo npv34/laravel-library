@@ -18,7 +18,7 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col">
-                                <form  method="post" action="{{route('libraries.store')}}">
+                                <form  method="post" action="{{route('libraries.store')}}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="col-xl-6 col-12">

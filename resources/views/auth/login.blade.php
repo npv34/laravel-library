@@ -120,7 +120,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-info border-info"><i class="ti-user"></i></span>
                             </div>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="email">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" autofocus placeholder="email">
 
                             @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -134,7 +134,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-info border-info"><i class="ti-lock"></i></span>
                             </div>
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="password">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="password">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -145,7 +145,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="checkbox">
-                                <input type="checkbox" id="basic_checkbox_1" >
+                                <input type="checkbox" id="basic_checkbox_1" name="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label for="basic_checkbox_1">Remember Me</label>
                             </div>
                         </div>
