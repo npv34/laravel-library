@@ -33,6 +33,7 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Name</th>
+                                    <th>Role</th>
                                     <th>Phone</th>
                                     <th>Email</th>
                                     <th>Address</th>
@@ -45,6 +46,7 @@
                                     <tr>
                                     <td>{{++$key}}</td>
                                     <td>{{$user->name}}</td>
+                                    <td>@if($user->role == 1 ) Admin @elseif($user->role == 2) Management @else User @endif </td>
                                     <td>{{$user->phone}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->address}}</td>

@@ -1,9 +1,11 @@
 $(document).ready(function () {
+
+    let url = window.location.origin;
     $('#search-customer').on('keyup', function () {
         let value = $(this).val();
         console.log(value);
         $.ajax({
-            url: 'http://localhost:8000/admin/borrows/searchCustomer',
+            url: url + '/admin/borrows/searchCustomer',
             type: 'GET',
             data: {'keyword': value},
             success: function (data) {
@@ -30,7 +32,7 @@ $(document).ready(function () {
         let value = $(this).val();
         console.log(value);
         $.ajax({
-            url: 'http://localhost:8000/admin/borrows/searchBook',
+            url: url + '/admin/borrows/searchBook',
             type: 'GET',
             data: {'keyword': value},
             success: function (data) {
@@ -61,7 +63,7 @@ $(document).ready(function () {
     $('.select-customer').click(function () {
         let idCustomer = $(this).attr("data-id");
         $.ajax({
-            url: 'http://localhost:8000/admin/customers/' + idCustomer,
+            url: url + '/admin/customers/' + idCustomer,
             type: 'GET',
             success: function (result) {
                 //dong model lai
@@ -80,7 +82,7 @@ $(document).ready(function () {
     $('body').on('click', '.select-book', function () {
         let idBook = $(this).attr("data-id");
         $.ajax({
-            url: 'http://localhost:8000/admin/books/' + idBook,
+            url: url + '/admin/books/' + idBook,
             type: 'GET',
             success: function (result) {
                 let status = (result['status'] === 1) ? 'Mới' : 'Cũ';
@@ -111,11 +113,6 @@ $(document).ready(function () {
 
         //lay ngay tra du kien
         let day_expected_return = $('#date-re').val();
-         //tao request form data
-        let data = new FormData();
-        data.append('book_id', idBook);
-        data.append('customer_id', idCustomer);
-        data.append('day_expected_return', day_expected_return);
 
         $.ajaxSetup({
             headers: {
@@ -123,13 +120,19 @@ $(document).ready(function () {
             }
         });//lay ngay muon hien tai
          $.ajax({
-            url: 'http://localhost:8000/admin/borrows/create',
+            url: url + '/admin/borrows/store',
             type: 'POST',
-            data: data ,
+            data: {book_id: idBook, customer_id : idCustomer, day_expected_return : day_expected_return} ,
             dataType: 'json',
-            processData: false,
             success: function (result) {
-                  console.log(result);
+                if (result.error) {
+                    alert(result.error);
+                }
+
+                if (result.success) {
+                    alert(result.success);
+                    location.reload()
+                }
             },
             error: function (errors) {
                   console.log(errors)
