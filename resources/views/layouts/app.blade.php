@@ -149,6 +149,8 @@
                             </li>
                             <li><a href="{{ route('borrows.create') }}"><i class="fa fa-circle-thin"></i>Add borrows</a>
                             </li>
+                            <li><a href="{{ route('borrows.return') }}"><i class="fa fa-circle-thin"></i>List borrows return</a>
+                            </li>
                         </ul>
                     </li>
                 @endcan

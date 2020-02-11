@@ -76,6 +76,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::prefix('borrows')->group(function () {
         Route::get('/', 'BorrowController@index')->name('borrows.index');
+        Route::get('/return', 'BorrowController@returnList')->name('borrows.return');
         Route::get('/create', 'BorrowController@create')->name('borrows.create');
         Route::post('/store', 'BorrowController@store')->name('borrows.store');
         Route::get('/{id}/update', 'BorrowController@update')->name('borrows.update');

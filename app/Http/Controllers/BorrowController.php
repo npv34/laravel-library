@@ -113,4 +113,12 @@ class BorrowController extends Controller
         Session::flash('success', 'Trả sách thành công');
         return redirect()->route('borrows.index');
     }
+    public function returnList()
+    {
+        if (!Gate::allows('manage-borrows')) {
+            abort(403);
+        }
+        $borrowsReturn = $this->borrowService->getBorrowReturn();
+        return view('manager.borrows.list-return',compact('borrowsReturn'));
+    }
 }
