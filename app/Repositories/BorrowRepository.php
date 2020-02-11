@@ -21,5 +21,9 @@ class BorrowRepository extends BaseRepository
     {
         return $this->borrow->findOrFail($id);
     }
+    public function getBorrowReturn()
+    {
+        return $this->borrow->where('day_return','<>', null)->get();
+    }
 
 }

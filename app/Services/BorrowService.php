@@ -26,5 +26,9 @@ class BorrowService
         $borrow->day_return = date('Y-m-d');
         $this->borrowRepo->save($borrow);
     }
+    public function getBorrowReturn()
+    {
+        return $this->borrowRepo->getBorrowReturn();
+    }
 
 }
