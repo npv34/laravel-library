@@ -104,7 +104,7 @@
     <![endif]-->
     <!-- jQuery 3 -->
     <script src="{{ asset('assets/vendor_components/jquery-3.3.1/jquery-3.3.1.js') }}"></script>
-
+    <script src="{{ asset('js/my.js') }}"></script>
 </head>
 <body class="hold-transition bg-light">
 
@@ -134,7 +134,10 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-info border-info"><i class="ti-lock"></i></span>
                             </div>
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="password">
+                            <input id="password" type="password" class="form-control  @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="password">
+                            <div class="input-group-prepend">
+                                <span id="event-password" class="input-group-text bg-info border-info"><i  class="fa fa-eye"></i></span>
+                            </div>
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
