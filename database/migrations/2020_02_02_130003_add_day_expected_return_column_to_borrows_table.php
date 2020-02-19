@@ -14,7 +14,7 @@ class AddDayExpectedReturnColumnToBorrowsTable extends Migration
     public function up()
     {
         Schema::table('borrows', function (Blueprint $table) {
-            $table->date('day_expected_return');
+            $table->date('day_expected_return')->nullable();
         });
     }
 
