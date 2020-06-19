@@ -3,7 +3,7 @@
     <section class="content-header">
         <h1>
             <a href="{{ route('users.index') }}" >Đang hoạt động</a>|
-            <a href="{{ route('users.trash') }}"  class="text-success">Đã xóa( {{count($usersOfTrash)}})</a>
+            <a href="{{ route('users.trash') }}"  class="text-success">Đã xóa({{count($usersOfTrash)}})</a>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
@@ -52,7 +52,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="5" class="text-center">No data</td>
+                                        <td colspan="6" class="text-center">No data</td>
                                     </tr>
                                 @endforelse
 

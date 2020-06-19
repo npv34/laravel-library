@@ -3,8 +3,7 @@
     <section class="content-header">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Borrows</a></li>
-            <li class="breadcrumb-item active">Borrows table</li>
+            <li class="breadcrumb-item active"><a href="{{ route('borrows.index') }}">Borrows</a></li>
         </ol>
     </section>
     <section class="content">
@@ -43,13 +42,13 @@
                                         <td>{{$borrow->customer->name}}</td>
                                         <td>{{$borrow->book->name}}</td>
                                         <td>{{$borrow->day_borrow}}</td>
-                                        <td>{{$borrow->day_expected_return}}</td>
-                                        <td><a href="{{ route('borrows.update',$borrow->id) }}" class="btn btn-success">Return
+                                        <td>{{$borrow->day_expected_return}}
+                                        <a href="{{ route('borrows.update',$borrow->id) }}" class="btn btn-success">Return
                                                 book</a></td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="5" class="text-center">No data</td>
+                                        <td colspan="6" class="text-center">No data</td>
                                     </tr>
                                 @endforelse
 

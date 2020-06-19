@@ -2,12 +2,11 @@
 @section('content')
     <section class="content-header">
         <h1>
-            <a href="" class="text-success">Đang hoạt động ( {{count($customers)}})</a>
+            <a href="" class="text-success">Đang hoạt động ({{count($customers)}})</a>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Customers</a></li>
-            <li class="breadcrumb-item active">Customers table</li>
+            <li class="breadcrumb-item active"><a href="{{ route('customers.index') }}">Customers</a></li>
         </ol>
     </section>
     <section class="content">
@@ -47,12 +46,17 @@
                                         <td>{{$customer->codeID}}</td>
                                         <td>{{$customer->class}}</td>
                                         <td>{{$customer->dob}}</td>
-                                        <td><a href="{{ route('customers.edit',$customer->id) }}" class="btn btn-success">Edit</a></td>
-                                        <td><a href="{{ route('customers.destroy',$customer->id) }}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
+                                        <td><a href="{{ route('customers.edit',$customer->id) }}"
+                                               class="btn btn-success">Edit</a>
+                                            <a
+                                                href="{{ route('customers.destroy',$customer->id) }}"
+                                                onclick="return confirm('Bạn chắc chắn muốn xóa?')"
+                                                class="btn btn-danger">Delete</a>
+                                        </td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="7" class="text-center">No data</td>
+                                        <td colspan="6" class="text-center">No data</td>
                                     </tr>
                                 @endforelse
 
