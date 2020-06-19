@@ -2,13 +2,12 @@
 @section('content')
     <section class="content-header">
         <h1>
-            <a href="" class="text-success">Đang hoạt động ( {{count($users)}})</a>|
+            <a href="" class="text-success">Đang hoạt động ({{count($users)}})</a>|
             <a href="{{ route('users.trash') }}">Đã xóa</a>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="mdi mdi-home-outline"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Users</a></li>
-            <li class="breadcrumb-item active">Users table</li>
+            <li class="breadcrumb-item"><a href="{{ route('users.index') }}">Users</a></li>
         </ol>
     </section>
     <section class="content">
@@ -37,23 +36,33 @@
                                     <th>Phone</th>
                                     <th>Email</th>
                                     <th>Address</th>
-                                    <th>Handles</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @forelse($users as $key=>$user)
 
                                     <tr>
-                                    <td>{{++$key}}</td>
-                                    <td>{{$user->name}}</td>
-                                    <td>@if($user->role == 1 ) Admin @elseif($user->role == 2) Management @else User @endif </td>
-                                    <td>{{$user->phone}}</td>
-                                    <td>{{$user->email}}</td>
-                                    <td>{{$user->address}}</td>
-                                    <td><a href="{{route('users.edit',$user->id)}}" class="btn btn-success">Edit</a></td>
-                                    <td><a href="{{route('users.destroy',$user->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa?')"  class="btn btn-danger">Delete</a></td>
-                                </tr>
-                                    @empty
+                                        <td>{{++$key}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>@if($user->role == 1 ) Admin @elseif($user->role == 2) Management @else
+                                                User @endif </td>
+                                        <td>{{$user->phone}}</td>
+                                        <td>{{$user->email}}</td>
+                                        <td>{{$user->address}}</td>
+
+                                        <td>
+                                            @if($user->id == 1 || $user->id == \Illuminate\Support\Facades\Auth::id() )
+                                            @else
+
+                                                <a href="{{route('users.edit',$user->id)}}"
+                                                   class="btn btn-success">Edit</a>
+                                                <a href="{{route('users.destroy',$user->id)}}"
+                                                   onclick="return confirm('Bạn chắc chắn muốn xóa?')"
+                                                   class="btn btn-danger">Delete</a>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                @empty
                                     <tr>
                                         <td colspan="5" class="text-center">No data</td>
                                     </tr>

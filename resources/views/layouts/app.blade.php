@@ -117,7 +117,6 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="{{ route('books.index') }}"><i class="fa fa-circle"></i>Books list</a></li>
-                            <li><a href="pages/error-500.html"><i class="fa fa-circle"></i>500</a></li>
                         </ul>
                     </li>
                 @endcan
@@ -132,7 +131,6 @@
                         <ul class="treeview-menu">
                             <li><a href="{{ route('customers.index') }}"><i class="fa fa-circle-thin"></i>Customers List</a>
                             </li>
-                            <li><a href="pages/map-vector.html"><i class="fa fa-circle-thin"></i>Vector Map</a></li>
                         </ul>
                     </li>
                 @endcan

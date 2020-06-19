@@ -7,6 +7,7 @@ use App\Repositories\UserRepository;
 use App\Services\UserService;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -52,7 +53,17 @@ class UserController extends Controller
         if (!Gate::allows('crud-users')) {
             abort(403);
         }
+
         $user = $this->userService->findById($id);
+
+        if ($user->id == 1) {
+            abort(403);
+        }
+
+        if ($user->id == Auth::id()) {
+            abort(403);
+        }
+
         return view('admin.users.edit', compact('user'));
     }
 
@@ -62,6 +73,15 @@ class UserController extends Controller
             abort(403);
         }
         $user = $this->userService->findById($id);
+
+        if ($user->id == 1) {
+            abort(403);
+        }
+
+        if ($user->id == Auth::id()) {
+            abort(403);
+        }
+
         $this->userService->update($request, $user);
         Session::flash('success', 'Cập nhật thành công');
         return redirect()->route('users.index');
@@ -73,6 +93,14 @@ class UserController extends Controller
             abort(403);
         }
         $user = $this->userService->findById($id);
+
+        if ($user->id == 1) {
+            abort(403);
+        }
+
+        if ($user->id == Auth::id()) {
+            abort(403);
+        }
         $this->userService->delete($user);
         Session::flash('success', 'Xóa thành công');
         return redirect()->route('users.index');

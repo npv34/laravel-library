@@ -5,15 +5,8 @@
     </a>
     <!-- Logo -->
     <a href="{{ route('home') }}" class="logo">
-        <!-- mini logo -->
-        <b class="logo-mini">
-            <span class="light-logo"><img src="{{ asset('templates/images/logo-light.png') }}" alt="logo"></span>
-            <span class="dark-logo"><img src="{{ asset('templates/images/logo-dark.png') }}" alt="logo"></span>
-        </b>
-        <!-- logo-->
         <span class="logo-lg">
-		  <img src="{{ asset('templates/images/logo-light-text.png') }}" alt="logo" class="light-logo">
-	  	  <img src="{{asset('templates/images/logo-dark-text.png')}}" alt="logo" class="dark-logo">
+	  	  <img src="{{asset('templates/images/logo-dark-text.png')}}" alt="logo" class="light-logo" style="width: 130px">
 	  </span>
     </a>
     <!-- Header Navbar -->
